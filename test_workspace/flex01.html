@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex01.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			height: 100vh;
+			display: flex;
+			width: 100vw;
+			justify-content: center;
+			align-items: center;
+		}
+		#box1{
+			text-align: center;
+			background: #48FFFF;
+			height: 20vh;
+			width: 20vw;
+		}
+		#box2{
+			text-align: center;
+			background: skyblue;
+			height: 50vh;
+			width: 20vw;
+		}
+		#box3{
+			text-align: center;
+			background: lightgreen;
+			height: 30vh;
+			width: 20vw;
+		}
+		/* flex 정렬 하기 위해 사용
+		vw = 뷰 와이드 보이는 화면가로의 비율
+		vh = 뷰 헤이트 보이는 화면세로의 비율
+		order = 숫자가 적은순부터 배치 order: 5; 
+		flex-direction = 배치 좌,우,상,하
+		:row-reverse 순서를 거꾸로 
+		:column-reverse 가로정렬, 리버스는 가로정렬후 순서를 거꾸로*/
+		/*
+		justify-content: flex 없이 가로 배치할때 사용
+		center - 가운데에서 정렬
+		flex-start - 앞에서 부터 정렬
+		flex-end - 끝에서부터 정렬
+		space-between - 블럭사이에만 간격주기
+		space-around - 블럭과 화면에 모두 간격주기( 1 ㅁ 1 1 ㅁ 1 1 ㅁ 1)
+		space-evenly - 블럭과 화면 간격 모두 맞추기( 1 ㅁ 1 ㅁ 1 ㅁ 1)
+		*/
+		/*align-items: 세로배치
+		center - 제일 긴 것을 기준으로 중앙에 배치
+		flex-end - 제일 긴 것을 기준으로 밑에 배치
+		scretch - 텍스트가 있을경우 늘어감(?)
+		*/
+	</style>
+</head>
+<body>
+<!-- 	flex컴포넌트들의 크기나 위치를 쉽게 잡아주는 도구
+	CSS의 레이아웃 관련 속성들이 다양하게 존재하고 있지만 효과적이지 않음.
+	but flex를 이용하면 레이아웃을 보다 더 효과적으로 표현할 수 있음. -->
+	<div class="container">
+		<div id="box1">Box1</div>
+		<div id="box2">Box2</div>
+		<div id="box3">Box3</div>
+	</div>
+	
+</body>
+</html>

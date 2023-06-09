@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p{font-size: 105px;}
+		button{
+			border: none;
+			background-color: dodgerblue;
+			color: white;
+			padding:10px;
+			font-size: 20px;
+		}
+		#panel, #flip{
+			padding: 5px;
+			text-align: center;
+			background-color: mediumseagreen;
+			color: white;
+			border: 1px solid #252525;
+			font-size: 25px;
+		}
+		#panel{
+			padding: 50px;
+			display: none;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".hide").click(function(event) {
+				$('p').hide('fast');
+				//1000 = 1초
+			});
+			$('.show').click(function(event) {
+				$('p').show('slow');
+				// $('p').css('color', 'red');
+			});
+			$('.toggle').click(function() {
+				$('p').toggle('slow');
+			});
+			
+			//fade 효과
+			$('.fadeout').click(function(event) {
+				$('#div1').fadeOut(1000);
+			});
+			$('.fadein').click(function(event) {
+				$('#div1').fadeIn(1000);
+			});
+
+			//슬라이드 효과
+			$('.slidedown').click(function(event) {
+				$('#panel').slideDown(5000);					
+			});
+			$('.slideup').click(function(event) {
+				$('#panel').slideUp('fast');
+			});
+			$('.slidetoggle').click(function(event) {
+				$('#panel').slideToggle(1000);
+			});
+
+			//Stop
+			$('.stop').click(function(event) {
+				$('#panel').stop();
+			});
+
+			//Animate: 애니메이션 효과를 줌
+			$('.animate_btn').click(function(event){
+				$('#anidiv').animate({
+					left : '250px',
+					height: '+=100px',
+					width: '+=100px'
+				});
+			});
+			$('.big_small').click(function(event) {
+				var div = $('#anidiv');
+				div.animate({ height : '300px', opacity : '0.4' }, 'slow');
+				div.animate({ width : '300px', opacity : '0.8' }, 'slow');
+				div.animate({ height : '100px', opacity : '0.4' }, 'slow');
+				div.animate({ width : '100px', opacity : '0.8' }, 'slow');
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<p>(o_______________________o)</p>
+	<div id="div1" style="width: 100px; height: 100px; background-color: black; color: white; margin: 20px;">나는 BOX다.</div>
+	<button class="hide">Hide</button>
+	<button class="show">Show</button>
+	<button class="toggle">Toggle</button>
+	<button class="fadein">Fadein</button>
+	<button class="fadeout">Fadeout</button>
+
+	<h1>슬라이드 효과</h1>
+	<div id="flip">눌러봐 (o_o)</div>
+	<div id="panel">(^_^)</div>
+
+	<button class="slideup">slideup</button>
+	<button class="slidedown">slidedown</button>
+	<button class="slidetoggle">slidetoggle</button>
+	<button class="stop">stop</button>
+
+
+
+	<h1>Animation</h1>
+	<hr>
+	<div id="anidiv" style="background-color: mediumspringgreen; width: 200px; height: 200px; position: relative;"></div>
+	<button class="animate_btn">Start animation</button>
+	<button class="big_small">Start Big_Small</button>
+		
+	
+</body>
+</html>

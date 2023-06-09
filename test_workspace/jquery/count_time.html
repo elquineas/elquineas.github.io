@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>count_time.html</title>
+	<style type="text/css">
+		p {
+			text-align: center;
+			font-size: 60px;
+			margin-top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var countDownDate = new Date('4 16, 2019 11:50:0').getTime();
+
+		var x = setInterval(function(){
+			var now = new Date().getTime();
+
+			var distance = countDownDate - now;
+
+			// alert('남은시간' + distance);
+
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			//floor 소숫점은 버리는 것
+
+			var hours = Math.floor((distance % (1000 * 60 * 60 *24))/(1000 * 60 * 60));
+
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60 ));
+
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById('demo').innerHTML = days + "일" + hours + "시" + minutes + "분" + seconds + "초";
+
+			if(distance <= 0){
+				clearInterval(x);
+				document.getElementById('demo').innerHTML = '짜라짜라짜짠~~ 짜파게티 당첨 ㅋ';
+			}
+
+
+		}, 1000);
+
+
+	</script>
+</body>
+</html>

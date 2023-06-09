@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nav01.html</title>
+<style type="text/css">
+	body{
+	margin:0px;
+	padding: 0px;	
+	}
+	ul{
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+		background-color: skyblue;
+		overflow: hidden; /* 지정된 크기안에서 넘어갈경우 값을 숨겨라 */
+	}
+	li{
+		float:left;
+	}
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		padding: 14px 16px;
+	}
+	li a:hover {
+		background-color: DodgerBlue;
+	}
+	.dropdown{
+		display: inline-block;
+	}
+	.dropdown_content{
+		display: none;
+		position: absolute;
+		background-color: #CEFBC9;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+	.dropdown_content a{
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+	.dropdown:hover .dropdown_content{
+		display: block;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">BEST</a></li>
+		<li><a href="#">TOP</a></li>
+		<li class="dropdown"><a href="#">OUTER</a>
+			<div class="dropdown_content"> <!-- dropdown nav bar -->
+				<a href="#">COAT</a>
+				<a href="#">JACKET</a>
+				<a href="#">CARDIGAN</a>
+				<a href="#">JUMPER</a>
+				<a href="#">PADDING</a>
+			</div>
+		</li>
+		<li><a href="#">DRESS</a></li>
+		<li><a href="#">PANTS</a></li>
+		<li><a href="#">SKIRT</a></li>
+		<li><a href="#">ACC</a></li>
+	</ul>
+	
+	
+	
+	
+</body>
+</html>

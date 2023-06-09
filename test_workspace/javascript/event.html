@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>자바스크립트 이벤트</title>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		function myFunction(str){
+			alert(str);
+		}
+		window.onload=function(){
+			document.getElementById("btn2").onclick=function(){ //익명함수(함수의 이름이 없음)
+				alert("HI");
+			}
+			document.getElementById("btn2").onclick=function(){ //익명함수(함수의 이름이 없음)
+				alert("Bye");
+			}
+			document.getElementById("btn3").addEventListener("click",function(){
+				alert("안녕");
+			}, false);
+			document.getElementById("btn3").addEventListener("click",function(){
+				alert("바이");
+			}, false);
+		}
+
+		
+	</script>
+</head>
+<body>
+	<p>안녕하세요. 귀여움을 담당하는 요미입니다.</p>
+	<button id="btn1" onclick="myFunction('hello')">버튼1</button>
+	<button id="btn2" >버튼2</button>
+	<button id="btn3" >버튼3</button>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>awesome_btn.html</title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			padding: 0px;
+		}
+		.middle{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		.btn{
+			background: none;
+			border: 2px solid #000;
+			font-family: "monstserrat", sans-serif; 
+			text-transform: uppercase;
+			padding:12px 20px;
+			min-width: 200px;
+			margin: 10px;
+			cursor: pointer;
+			transition: color 0.4s linear; 
+			/* transition적용 가능한 옵션
+			linear 시작시점과 종료시점까지 동일한 속도로 변화가 일어남
+			ease:초반에 서서히 움직이다 빠르게 이동하고 종료시점에 다시 느리게 변화됨
+			ease-in: 시작 시점에서 서서히 진행함
+			ease-out: 종료되는 시점에서 서서히 진행함
+			ease-in-out: 시작 시점 종료 시점 모두 서서히 진행됨
+			cubic-bezier(a,b,c,d): 벤지에 곡선을 적용함
+			*/
+			position: relative;
+			/* outline: none; 버튼의 경계선 효과 */
+		}
+		.btn:hover{
+			color: #fff;
+		}
+		.btn:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			z-index: -1;
+			transition: transform 0.5s;
+			transform-origin: bottom right; /*변화의 중심을 설정*/
+			transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+		}
+		.btn1:before{
+			transform: scaleX(0);
+		}
+		.btn1:hover:before{
+			transform: scaleX(1); /* scale X는 x 축 뒤에 숫자는 0은 0%, 1은 100%*/
+		}
+		.btn2:before{
+			transform: scaleY(0);
+		}
+		.btn2:hover:before{
+			transform: scaleY(1);
+		}
+	</style>
+</head>
+<body>
+	<div class="middle">
+		<button class="btn btn1">Hover Me</button>
+		<button class="btn btn2">Hover Me</button>
+	</div>
+</body>
+</html>

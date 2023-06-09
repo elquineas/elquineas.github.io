@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transform01.html</title>
+	<style type="text/css">
+		div{
+			display: inline-block;
+			padding: 5px;
+			color: white;
+			background-color: black;
+		}
+		/* 변환 */
+		#rotate { transform:rotate(20deg); }
+		#skew{ transform: skew(0deg, -20deg); }
+		#translate{ transform: translateY(100px); }
+		#scale{ transform: scale(3,1); }
+		
+		#rotate:hover{transform: rotate(80deg);}	
+		#skew:hover{transform: skew(0deg, -60deg);}
+		#translate:hover{transform: translate(50px, 100px);}
+		#scale:hover{transform: scale(4,2);}
+
+	</style>
+</head>
+<body>
+	<!-- transform 기능을 이용하면, 텍스트나 이미지를 회전, 확대등
+		다양한 기하학적인 모양으로 출력 가능 
+		또 마우스를 올릴때 순간적으로 이러한 변환을 일으킬 수 있다.-->
+	<!-- 회전각도의 단위 : deg, 시계방향으로 회전 -->
+	<!-- 위치 이동 : translate
+		1) translate(x,y) 태그를 x축, y축으로 x,y만큼 이동
+		2) translateX(n) 태그를 x축으로 n만큼 이동
+		3) translateY(n) 태그를 y축으로 n만큼 이동 -->
+	<!-- 확대/축소: scale
+		1)scale(w,h):태그의 폭과 높이를 각각 w, h배 만큼
+		조절 / w나 h를 0으로 주면 보이지 않게 됨 
+		2)scaleX(n) : 태그의 폭을 n배만큼 조절
+		3)scaleY(n) : 태그의 높이를 n배만큼 조절-->
+	<!-- 회전:rotate(angle):태그를 angle 각도만큼 시계방향 회전 -->
+	<!-- 기울임: skew
+		1)skew(x-angle, y-anle): 태그를 x축과 y축을 기준으로
+		x-angle, y-anle 각도만큼 기울임
+		2) angleX(angle) : 태그의 x축을 기준으로 angle 각도만큼 기울임
+		3) angleY(angle) : 태그의 y축을 기준으로 angle 각도만큼 기울임 -->
+	
+	<h3>다양한 Transform</h3>
+	<hr>
+	<div id="rotate">rotate 20 deg</div>
+	<div id="skew">skew(0 -20deg)</div>
+	<div id="translate">translateY(100px)</div>
+	<div id="scale">scale(3,1)</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gradient_border_card.html</title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background-color: #060c21;
+			font-family: 'poppins', sans-serif;
+		}
+		.box{
+			
+		}
+		.container{
+			position: relative;
+			width: 90%;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+			/*repeat의 처음은 화면에 들어올 수 있는 최대갯수와 들어올 수 있는 크기를 지정해주고 minmax 260으로 최대 최소값, 1fr 카드1장의 비율 (1flex와 비슷)*/
+			grid-template-rows: auto;
+			/*자식들의 rows와 크기를 지정*/
+			grid-gap: 0 40px;
+			/*grid끼리의 사이간격*/
+		}
+		.container .box{
+			position: relative;
+			height: 500px;
+			background: #060c32;
+			display: flex;
+			justify-content: center; /*가로*/
+			align-items: center; /*세로*/
+			border: 1px solid #000;
+		}
+		.container .box:before{
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			background: #fff;
+			transform: skew(2deg, 2deg);
+			z-index: -1;
+		}
+		.container .box:nth-child(1):before{
+			background: linear-gradient(315deg, #ff0057, #e64a19);
+		}
+		.container .box:nth-child(2):before{
+			background: linear-gradient(315deg, #89ff00, #00bcd4);
+		}
+		.container .box:nth-child(3):before{
+			background: linear-gradient(315deg, #e91e63, #5d02ff);
+		}
+		.container .box:nth-child(4):before{
+			background: linear-gradient(315deg, #ff0000, #ffc107);
+		}
+		.container .box:after{
+			content: '';
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			background: rgba(255,255,255,0.05);
+			pointer-events: none;
+		}
+		.content{
+			position: relative;
+			padding: 20px;
+			transform: translateY(40px);
+		}
+		.box .content h2{
+			position: absolute;
+			top: -60px;
+			right: 20px;
+			margin: 0;
+			padding: 0;
+			font-size: 10em;
+			color:rgba(255,255,255,0.05);
+			transition: .5s;
+		}
+		.box:hover .content h2{
+			top: -140px;
+		}
+		.box .content h3{
+			margin: 0 0 10px;
+			padding: 0;
+			font-size: 24px;
+			font-weight: 500;
+			color: #fff;
+		}
+		.box .content p{
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			font-size: 16px;
+		}
+		.box .content a{
+			position: relative;
+			margin: 20px 0 0;
+			padding: 10px 20px;
+			text-decoration:cone;
+			border: 1px solid #fff;
+			display: inline-block;
+			color: #fff;
+			transition: .5s;
+			transform: translateY(-40px);
+			opacity: 0;
+			visibility: hidden;
+		}
+		.box:hover .content a{
+			transform: translateY(0px);
+			opacity: 1;
+			visibility: visible;
+		}
+		.box .content a:hover{
+			color: #000;
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<h2>01</h2>
+				<h3>Serveic one</h3>
+				<p>Lorem ipsum dolor sit amet,
+				   consectetur adipisicing elit, sed do eiusmod
+				   tempor incididunt ut labore ey dolore
+				   magna aliqua. Ut enim ad minim veniam,
+				   quis nostrud exercitation ullamco
+				   laboris nisi ut aliquip ex ea commodo
+				   consequat.
+				</p>
+				<a href="#">Button</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<h2>02</h2>
+				<h3>Serveic two</h3>
+				<p>Lorem ipsum dolor sit amet,
+				   consectetur adipisicing elit, sed do eiusmod
+				   tempor incididunt ut labore ey dolore
+				   magna aliqua. Ut enim ad minim veniam,
+				   quis nostrud exercitation ullamco
+				   laboris nisi ut aliquip ex ea commodo
+				   consequat.
+				</p>
+				<a href="#">Button</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<h2>03</h2>
+				<h3>Serveic three</h3>
+				<p>Lorem ipsum dolor sit amet,
+				   consectetur adipisicing elit, sed do eiusmod
+				   tempor incididunt ut labore ey dolore
+				   magna aliqua. Ut enim ad minim veniam,
+				   quis nostrud exercitation ullamco
+				   laboris nisi ut aliquip ex ea commodo
+				   consequat.
+				</p>
+				<a href="#">Button</a>
+			</div>
+		</div>
+		<div class="box">
+			<div class="content">
+				<h2>04</h2>
+				<h3>Serveic four</h3>
+				<p>Lorem ipsum dolor sit amet,
+				   consectetur adipisicing elit, sed do eiusmod
+				   tempor incididunt ut labore ey dolore
+				   magna aliqua. Ut enim ad minim veniam,
+				   quis nostrud exercitation ullamco
+				   laboris nisi ut aliquip ex ea commodo
+				   consequat.
+				</p>
+				<a href="#">Button</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

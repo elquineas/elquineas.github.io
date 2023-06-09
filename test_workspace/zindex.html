@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>z-index(수직으로 쌓기)</title>
+	<style type="text/css">
+		div{
+			position: absolute;
+		}
+		#spadeA{
+			z-index:-3;
+			left:10px;
+			top:20px;
+			width: 100px;
+			height: 100px;
+			background: skyblue;
+		}
+		#spadeB{
+			z-index:2;
+			left:40px;
+			top:30px;
+			width: 100px;
+			height: 100px;
+			background: tomato;
+		}
+		#spadeC{
+			z-index:2;
+			left:80px;
+			top:40px;
+			width: 100px;
+			height: 100px;
+			background: Slateblue;
+		}
+		#spadeD{
+			z-index:7;
+			left:120px;
+			top:50px;
+			width: 100px;
+			height: 100px;
+			background: mediumseagreen;
+		}
+	</style>
+</head>
+<body>
+<!-- z-index의 경우 position이 relative나 absolute인
+경우에만 작동됨. 
+z-index의 지정이 없는 경우 html 문서에 나오는 순서로
+z-index가 자동으로 결정됨.
+z-index의 숫자가 클수록 앞으로 나옴. -->
+	<h3>z-index 프로퍼티</h3>
+	<div>
+		<div id="spadeA">스페이드A</div>
+		<div id="spadeB">스페이드B</div>
+		<div id="spadeC">스페이드C</div>
+		<div id="spadeD">스페이드D</div>
+	</div>
+</body>
+</html>

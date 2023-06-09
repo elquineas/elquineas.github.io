@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>비디오 배경 메인</title>
+	<style type="text/css">
+		*{ box-sizing: border-box; }
+		body { margin: 0px; padding: 0px; }
+		#banner{
+			position: relative;
+			height: 100vh!important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			text-align: center;
+			overflow: hidden;
+		}
+		.inner{
+			position: relative;
+			color: white;
+			/*z-index: -1;*/
+		}
+		#banner:before{
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #041625;
+			height: 100%;
+			width: 100%;
+			left: 0px;
+			top: 0px;
+			opacity: .45;
+			/*z-index: 1;*/
+		}
+		#banner video{
+			position: absolute;
+			transform: translate(50%, 50%);
+			bottom: 50%;
+			right: 50%;
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+			z-index: -2;
+		}
+		.inner h1{font-size: 45px;}
+		.inner p {font-size: 25px;}
+		.inner > a{
+			color: white;
+			display: block;
+			text-decoration: none;
+			border: 2px solid white;
+			border-radius: 5px;
+			padding: 5px 5px;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<section id="banner">
+		<div class="inner">
+			<header>
+				<h1>This is Yes or Yes video</h1>
+				<p>Twice</p>
+			</header>
+			<a href="#" class="btn">Start</a>
+			<video autoplay loop>
+				<source src="images/videoplayback.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

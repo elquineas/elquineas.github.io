@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style type="text/css">
+		@import url(main.css);
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var flag = 0;
+			$('.menu_icon > i').click(function() {
+				if(flag == 0){
+					$('.body').css('transform', 'rotate(-20deg').css('transition', '0.5s');
+					flag = 1;
+				}else{
+					$('.body').css('transform', 'rotate(0deg').css('transition', '0.5s');
+					flag = 0;
+				}
+				
+
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="view">
+		<div class="menu_icon">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div class="body">
+			<div class="left_body">
+				<div class="box"></div>
+				<div class="menu_box">
+					<div class="menu_list">
+						<span class="list">Hi</span>
+						<span class="list">Hello</span>
+						<span class="list">안녕</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="menu"></div>
+
+			<div class="right_body">
+				<div class="box"></div>
+				<div class="box"></div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

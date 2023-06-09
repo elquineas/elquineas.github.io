@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body, ul{
+			margin: 0; padding: 0;
+		}
+		.insert_div{
+			border: 1px solid #DDD;
+			width: 300px;
+			height: 48px;
+			box-sizing: border-box;
+			margin-top: 20px;
+			position: relative;
+			margin-left: 20px;
+		}
+		.insert_label{
+			font-size: 14px;
+			position: absolute;
+			z-index: 1;
+			transition: all .4s cubic-bezier(.25,.8,.25,1);
+			transition-duration: .3s;
+			color: #979797;
+			top: 14px;
+			left: 10px;
+		}
+		.input_class{
+			width: 100%;
+			height: 44px;
+			display: block;
+			position: relative;
+			border: none;
+			overflow: visible;
+			padding: 20px 0 0 10px;
+			box-sizing: border-box;
+			transition: all .4s cubic-bezier(.25,.8,.25,1);
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="insert_id" class="insert_div">
+		<label for="input_id" class="insert_label">
+			이메일 주소를 입력해주세요.
+		</label>
+		<input type="text" id="input_id" class="input_class">
+	</div>
+	<div id="insert_pw" class="insert_div">
+		<label for="input_pw" class="insert_label">
+			패스워드를 입력해주세요.
+		</label>
+		<input type="password" id="input_pw" class="input_class">
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.input_class').focus(function(event) {
+				$(this).css('font-size', '17px');
+				$(this).prev().css('top', '5px').css('font-size', '10px');
+			});
+			$('.input_class').blur(function(event) {
+				var flag = $(this).val();
+
+				if(flag==''){
+					$(this).css('font-size', '5px');
+					$(this).prev().css('top', '14px').css('font-size', '14px');
+				}
+				
+			});
+		});
+	</script>
+</body>
+</html>

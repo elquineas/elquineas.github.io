@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR|Poor+Story|Song+Myung');
+		body{
+			font-family: 'Noto Serif KR', serif;
+			text-align: center;
+		}
+		table{
+			margin: 0px auto;
+			border-collapse: collapse;
+		}
+		th{
+			border-top:2px solid lightgray;
+			padding:10px;
+		}
+		#title{
+			font-size: 2em;
+			height: 100px;
+			text-shadow: 2px 2px grey;
+		}
+		thead{
+			width: 100px;
+		}
+		td{
+			position: relative;
+			border: 2px solid lightgray;
+			width: 100px;
+			height: 60px;
+			/* padding: 20px; */
+			border-collapse: collapse;
+		}
+		td:hover{
+			background-color: lightgray;
+		}
+		.wek{
+			border: 2px solid lightgray;
+			font-family: 'Poor Story', cursive;
+			background-color: lightgray;
+		}
+		#sun{
+			color: salmon;
+		}
+		#holiday{
+			position: relative;
+			color: salmon;
+		}
+		#holiday:hover{
+			/* background-color: salmon; */
+		}
+		#holiday_down{
+			border: 1px solid black;
+			display: none;
+			position: absolute;
+			top:0px;
+			left:0;
+			color:black;
+			background-color: #FFFFA1;
+			width: 100px;
+			height: 50px;
+		}
+		#holiday:hover #holiday_down{
+			z-index: 10;
+			display: inline-block;
+		}
+		#typing{
+			position: relative;
+			background-color: #B2CCFF;
+		}
+		#typing_down{
+			border: 1px solid black;
+			display: none;
+			position: absolute;
+			top:30px;
+			left:0px;
+			background-color: #FFFFA1;
+			width: 100px;
+			height: 50px;
+		}
+		#typing:hover #typing_down{
+			z-index: 10;
+			display: inline-block;
+		}
+		#test{
+			position: relative;
+			background-color: skyblue;
+		}
+		#test_down{
+			border: 1px solid black;
+			display: none;
+			position: absolute;
+			top:30px;
+			left:0;
+			background-color: #FFFFA1;
+			width: 100px;
+			height: 50px;
+		}
+		#test:hover #test_down{
+			z-index: 10;
+			display: inline-block;
+		}
+		#lun{
+			background-color: #D1B2FF;
+		}
+		
+		span{
+			position: absolute;
+			top:3px;
+			left:3px;
+		}
+		#center{ 
+			margin: 50px;
+		}
+		.month{
+			color:#BDBDBD;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div id="center">
+		<table>
+			<thead>
+				<tr id="title">
+					<th colspan="7">2019.3<br>SCHEULE</th>
+				</tr>
+			</thead>
+		
+		<!-- colspan(가로로 합치기)
+		     rowspan(세로로 합치기) -->
+		
+			<tbody>
+				<tr class="wek">
+					<th>일요일</th>
+					<th>월요일</th>
+					<th>화요일</th>
+					<th>수요일</th>
+					<th>목요일</th>
+					<th>금요일</th>
+					<th>토요일</th>
+				</tr>
+				<tr>
+					<td class="month"><span>24</span></td>
+					<td class="month"><span>25</span></td>
+					<td class="month"><span>26</span></td>
+					<td class="month"><span>27</span></td>
+					<td class="month"><span>28</span></td>
+					<td id="holiday"><span>1(삼일절)</span></td>
+					<td><span>2</span></td>
+				</tr>
+				<tr>
+					<td id="sun"><span>3</span></td>
+					<td><span>4</span></td>
+					<td><span>5</span></td>
+					<td><span>6</span></td>
+					<td><span>7</span></td>
+					<td><span>8</span></td>
+					<td><span>9</span></td>
+				</tr>
+				<tr>
+					<td id="sun"><span>10</span></td>
+					<td><span>11</span></td>
+					<td><span>12</span></td>
+					<td><span>13</span></td>
+					<td><span>14</span></td>
+					<td><span>15</span></td>
+					<td><span>16</span></td>
+				</tr>
+				<tr>
+					<td id="sun"><span>17</span></td>
+					<td><span>18</span></td>
+					<td><span>19</span></td>
+					<td><span>20</span></td>
+					<td><span>21</span></td>
+					<td id="typing"><span>22</span>
+						<div id="typing_down" >영타대회<br>입니다.</div>
+					</td>
+					<td><span>23</span></td>
+				</tr>
+				<tr>
+					<td id="sun"><span>23</span></td>
+					<td id="test"><span>24</span>
+						<div id="test_down" >DB시험<br>입니다.</div>
+					</td>
+					<td><span>25</span></td>
+					<td><span>26</span></td>
+					<td><span>27</span></td>
+					<td><span>28</span></td>
+					<td><span>29</span></td>
+				</tr>
+				<tr>
+					<td id="sun"><span>30</span></td>
+					<td><span>31</span></td>
+					<td class="month"><span>1</span></td>
+					<td class="month"><span>2</span></td>
+					<td class="month"><span>3</span></td>
+					<td class="month"><span>4</span></td>
+					<td class="month"><span>5</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

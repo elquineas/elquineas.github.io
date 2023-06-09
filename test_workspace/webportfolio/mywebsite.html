@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my site</title>
+	<link rel="icon" type="image/png" href="img/logo.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="common.css">
+	<style type="text/css">
+		html{scroll-behavior: smooth;}
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+		*{margin: 0px; padding: 0px;}
+		body{
+			background-color: #000;
+		}
+		/*TOP버튼 */
+		#topBtn{
+			position: fixed;
+			bottom: 40px;
+			right: 40px;
+			font-size: 22px;
+			width: 50px;
+			height: 50px;
+			background: #3f3f3f;
+			color: white;
+			border: none;
+			cursor: pointer;
+			outline: none;
+			border-radius: 10px;
+			display: none;
+		}
+		#topBtn i{
+			transition: .3s; 
+		}
+		#topBtn:hover{
+			background: #5f5f5f;
+		}
+		#topBtn:hover i{
+			transform: scale(1.3);
+		}
+	
+		.side_wrap{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 15%;
+			height: 100%;
+			min-width: 300px;
+			background-color: #262626;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+			0 4px 20px 0 rgba(0,0,0,0.19);
+			display: flex;
+			flex-direction: column;
+			z-index: 1;
+		}
+		.inner_side{
+			position: relative;
+			padding: 70px 20px;
+		}
+
+		/*사이드 글자 네온*/
+		.sheader>h1{
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			font-size: 2.5em;
+			padding: 35px 0px;
+			text-shadow: 0 0 20px skyblue,
+			0 0 20px green,
+			0 0 20px blue;
+		}
+
+
+		/* 화살표 버튼 */
+		.close_btn{
+			position: absolute;
+			top: 50%;
+			left: 300px;
+			height: 70px;
+			width: 15px;
+			border-radius: 0 5px 5px 0;
+			background: #D4F4FA;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: .2s linear;
+			z-index: 3; 
+		}
+		.close_btn > i {
+			position: absolute;
+			font-size: 20px;
+			color: #343434;
+		}
+		.close_btn:hover {
+			transform: scale(1.3);
+		}
+
+		/*사이드 메뉴*/
+		.smenu{
+			padding: 20px 0;
+		}
+		.inner_smenu > ul > li{
+			margin: 20px;
+			transition: 0.5s;
+			text-align: center;
+		}
+		.inner_smenu > ul > li > a{
+			display: block;
+			padding: 10px 5px;
+			font-size: 20px;
+			color: #f1f1f1;
+			text-transform:uppercase;
+			/*transition: .5s;*/
+			text-shadow: 0 0 5px #ccc;
+		}
+		.inner_smenu > ul > li > a:hover {
+			color: skyblue;
+			border-left: 3px solid #D4F4FA
+			/*background-color: #D4F4FA;*/
+			/*border-radius: 10px; */
+		}
+
+		/*sns버튼*/
+		.sfooter{
+			margin-top: 100px; 
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.sns_btn{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-color: #333;
+			margin: 5px;
+			border-radius: 30%;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+			0 4px 20px 0 rgba(0,0,0,0.19);
+			/*color:#FAF4C0;*/
+			overflow: hidden;
+			position: relative;
+			text-align: center; 
+		}
+		.sns_btn i{
+			line-height: 50px;
+			font-size: 25px;
+			transition: 0.2s linear;
+		}
+		.sns_btn:hover i {
+			transform: scale(1.5);
+			color: #eee;
+		}
+		.sns_btn:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			transform: rotate(45deg);
+			left: -110%;
+			top: 90%;
+		}
+		.sns_btn:hover:before{
+			animation: sns_hover 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		@keyframes sns_hover{
+			0%{left: -100%; top:90%;}
+			50%{left: 10%; top:-30%;}
+			100%{left: -10%; top:-10%;}
+		}
+		#insta{color: #BD24A9; background-color: white}
+		#facebook{color: #4374D9; background-color: white}
+		#youtube{color: #FF0000; background-color: white}
+		#line{color: #1fbc02; background-color: white}
+		
+		#insta:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #BD24A9;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		#insta:hover:before{
+			animation: sns_hover 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		#facebook:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #4374D9;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		#facebook:hover:before{
+			animation: sns_hover 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		#youtube:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #FF0000;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		#youtube:hover:before{
+			animation: sns_hover 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		#line:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #1fbc02;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		#line:hover:before{
+			animation: sns_hover 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+
+
+		/*본문내용*/
+		.content_wrap{
+			padding-left: 300px;
+			transition: .3s; 
+		}
+		.content_wrap > .aboutme, .img_me {
+			 flex-direction: column;
+			/*height: 100px;*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #000;
+			transition: .3s; 
+		}
+		.aboutme{
+			margin-top: 100px;
+			text-align: center;
+			color: #f1f1f1;
+			display: inline-flex;
+			filter: brightness(200%);
+			overflow: hidden;
+		}
+
+		/*본문 헤더 네온*/
+		.text{
+			color: #fff;
+			background: #000;
+			font-size: 70px;
+			font-weight: bold;
+			font-family: Arial;
+			text-transform: uppercase;
+		}
+		.text:before{
+			content: 'About Me';
+			position: absolute;
+			mix-blend-mode: difference;
+			filter: blur(3px);
+		}
+		.text_profile{
+			color: #fff;
+			background: #000;
+			font-size: 70px;
+			font-weight: bold;
+			font-family: Arial;
+		}
+		.text_profile:before{
+			content: 'Profile';
+			position: absolute;
+			mix-blend-mode: difference;
+			filter: blur(3px);
+		}
+		.text_skills{
+			color: #fff;
+			background: #000;
+			font-size: 70px;
+			font-weight: bold;
+			font-family: Arial;
+		}
+		.text_skills:before{
+			content: 'Technical Skills';
+			position: absolute;
+			mix-blend-mode: difference;
+			filter: blur(3px);
+		}
+		.text_contact{
+			color: #fff;
+			background: #000;
+			font-size: 70px;
+			font-weight: bold;
+			font-family: Arial;
+		}
+		.text_contact:before{
+			content: 'Contact';
+			position: absolute;
+			mix-blend-mode: difference;
+			filter: blur(3px);
+		}
+
+		/*#B2CCFF #D1B2FF */
+		.gradient{
+			background: linear-gradient(113.80436209453319deg, rgba(209, 178, 255,1) 4.927083333333334%,rgba(178, 204, 255,1) 97.84374999999999%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			mix-blend-mode: multiply;
+			background-color: black;
+		}
+		.dodge{
+			background: radial-gradient(circle, white, black 35%) center / 25% 25%;
+			position: absolute;
+			top: -100%;
+			left: -100%;
+			right: 0;
+			bottom: 0;
+			mix-blend-mode: color-dodge;
+			animation: dodge_area 3s linear infinite;
+			}
+		@keyframes dodge_area{
+			to{transform: translate(50%, 50%);}
+		}
+
+		/* 사진 */
+		.content_wrap > div > img{
+			width: 25%;
+			height: 25%;
+			margin: 32px 0;
+			max-width: 30%;
+			border-radius: 25px;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+			0 4px 20px 0 rgba(0,0,0,0.19);
+		}
+
+		/*사진에 있는 설명*/
+		.job_wrap{
+			text-align: center;
+			color: #000;
+			width: 25%;
+			margin: auto;
+			padding: 7px 0px;
+			border-radius: 25px;
+			box-shadow: 0 4px 10px 0 rgba(234,234,234,0.2),
+						5px 10px 20px 0 rgba(246,246,246,0.19);
+			background-color: #919191;
+		}
+		.wrap{
+			font-size: 2em;
+			/*background: black;*/
+			display: inline-block;
+			filter: brightness(200%);
+			overflow: hidden;
+		}
+
+		/*본문내용*/
+		.profile_wrap{
+			padding: 32px 0;
+		}
+		.profile{
+			text-align: center;
+			width: 100%;
+			margin-top: 100px;
+		}
+		h2 > b{
+			text-align: center;
+			color: #f1f1f1;
+			font-size: 2em;
+		}
+
+		/* 아이콘 */
+		.icon{
+			/*color: white;*/
+			cursor: pointer;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background: #262626;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+						0 4px 20px 0 rgba(0,0,0,0.19);			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+/*		.icon_wrap{
+			text-align: center;
+		}*/
+		.icon > i{
+			color: #FAF4C0;
+			font-size: 40px;
+			transition: .2s;
+		}
+
+		.icon:hover i {
+			transform: scale(1.3);
+		}
+		.icon_group{
+			width: 60%;
+			display: flex;
+			margin: 3% auto;
+			justify-content: space-evenly;
+		}
+		.icon:hover:before{
+			cursor: pointer;
+		/*	box-shadow: 0 0 20px skyblue,
+						0 0 20px purple,
+						0 0 20px blue;*/
+			animation: icon_bing 1s linear infinite;
+		}
+		.icon:hover:after{
+			cursor: pointer;
+		/*	box-shadow: 0 0 20px skyblue,
+						0 0 20px purple,
+						0 0 20px blue;*/
+			animation: icon_bing 1s linear infinite;
+			/*animation-timing-function: linear; */
+		}
+		/*.icon:hover{
+			animation: icon_bing .1s linear infinite;
+		}*/
+
+		.icon:before{
+			content: '';
+			border-radius: 50%;
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			background: #fff;
+			z-index: -1;
+		}
+		.icon:after{
+			content: '';
+			border-radius: 50%;
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			background: #fff;
+			z-index: -2;
+			filter: blur(5px);
+		}
+		.icon:before, .icon:after{
+			/*background: linear-gradient(10deg, #8041D9, #6799FF);*/
+			background: linear-gradient(45deg, #B2CCFF, #343434, #D1B2FF);
+		}
+
+		@keyframes icon_bing{
+			0%{ transform: rotate(0deg); }
+			100%{ transform: rotate(360deg); }
+		}
+
+
+		.icon:hover .word_wrap{
+			opacity: 1;
+			box-shadow: 0 0 20px skyblue,
+						0 0 20px purple,
+						0 0 20px blue;
+		}
+		.word_wrap{
+			background-color: #f1f1f1;
+			position: absolute;
+			padding: 15px 10px;
+			border-radius: 15px;
+			top: 100%;
+			z-index: 5;
+			opacity: 0;
+			transition: opacity 0.5s;
+			white-space: nowrap;
+		}
+		.shape{
+			background-color: #f1f1f1;
+			width: 17px;
+			height: 17px;
+			position: absolute;
+			top: -8px;
+			left: 50%;
+			transform: translate(-50%) rotate(45deg);
+			z-index: 4;
+		}
+		
+
+		.skills{
+			text-align: center;
+			margin-top: 200px;
+			padding: 32px 0;
+		}
+		.whitebar{
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+			width: 40%;
+			height: 39px;
+			line-height:39px;
+			background-color: white;
+			margin: auto;
+			border-radius: 25px;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
+			0 4px 20px 0 rgba(0,0,0,0.19);	 
+		}
+		.whitebar > p {
+			left: 50%;
+			transform: translate(-50%);
+			margin: 0 auto;
+			position: absolute;
+			text-align: center;
+			z-index: 10;
+		}
+		.whitebar:hover .slatebar60{
+			animation: anibar 1s 1;
+			left:-10%;
+		}
+
+		 .whitebar:hover .slatebar50{
+		 	animation: anibar 1s 1;
+			left:-10%;
+		 }
+
+		 .whitebar:hover .slatebar20{
+			animation: anibar 1s 1;
+			left:-10%;
+		 }
+
+
+
+
+		/*.slatebar{
+			background-color: #FAED7D;
+			height: 39px;
+			border-radius: 25px;
+			text-align: center;
+			line-height: 37px;
+			left:-100px;
+		}*/
+
+		.slatebar60{
+			position: absolute;
+			background: linear-gradient(15deg, #D1B2FF, #B2CCFF);
+			height: 39px;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 37px;
+			left:-65%;
+			width:70%;
+			z-index: 3;
+		}
+		.slatebar50{
+			position: absolute;
+			background: linear-gradient(15deg, #D1B2FF, #B2CCFF);
+			height: 39px;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 37px;
+			left:-55%;
+			width:60%;
+			z-index: 3;
+		}
+
+		.slatebar20{
+			position: absolute;
+			background: linear-gradient(15deg, #D1B2FF, #B2CCFF);
+			height: 39px;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 37px;
+			left:-25%;
+			width:30%;
+			z-index: 3;
+		}
+
+		@keyframes anibar{
+			0%{left:-80%;}
+			50%{left:0%;}
+			100%{left:-10%;}
+		}
+
+
+		.skills > p{
+			display: block;
+			width: 40%;
+			margin: 16px auto;
+			padding-left: 25px;
+			color: white;
+		}
+		.skills > h2 {
+			text-align: center;
+			padding-bottom: 50px;
+		}
+		.contact_wrap{
+			text-align: center;
+			margin-top: 200px;
+			padding: 32px 0;
+		}
+		.contact_wrap > h2{
+			text-align:center;
+		}
+		.contact > p{
+			padding: 10px;
+			color: #f1f1f1;
+			font-size: 20px;
+		}
+		.inner_contact{
+			margin: 50px auto 100px;
+			width: 60%;
+			/*border: 1px solid yellow;*/
+			display: flex;
+		}
+		.map{ 
+			position: relative;
+			height: 100%;
+			flex: 1;
+		}
+
+		.contact{ 
+			text-align: left;
+			flex: 1.5;
+			/*border: 1px solid blue; */
+			padding: 15px 15px;
+		}
+		.coninfo > label{
+			font size: 15px;
+			color: #f1f1f1;
+		}
+		.coninfo>input{
+			border: 1px solid #ccc;
+			width: 100%;
+			padding: 8px;
+			height: 40px;
+			margin-top: 3px; 
+		}
+		.contact > button {
+			width: 100%;
+			margin: 15px auto 0;
+			background-color: #B2CCFF;
+			color: #343434;
+			border: 0;
+			padding: 8px;
+			height: 40px;
+			display: block;
+		}
+		/*
+		body:hover{
+			animation: small_body 2s linear 1;
+		}
+		*/
+		@keyframes small_body{
+			0%{ 
+				transform: scale(1) rotate(0deg);
+			}
+			100%{
+				transform: scale(0) rotate(3600deg);
+			}
+		}
+		.pofile_wrap{
+			width: 100%;
+		}
+
+
+	</style>
+	
+</head>
+<body onload="initialize()">
+	<!-- TOP버튼 (최상위 스크롤로 올라감) -->
+	<button id="topBtn">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+
+
+	<aside>
+		<div class="side_wrap">
+			<div class="inner_side">
+				<div class="close_btn">
+					<i class="fas fa-angle-left"></i>
+				</div>		
+				<div class="sheader">
+					<h1>Mr.Do Yeon<br>
+					Programmer</h1>
+				</div>
+
+				<div class="smenu">
+					<div class="inner_smenu">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Me</a></li>
+							<li><a href="#profile1">Profile</a></li>
+							<li><a href="#skills1">Skills</a></li>
+							<li><a href="#contact1">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="sfooter">
+					<div class="sns_wrap" >
+						<a href ="#" class="sns_btn" id="insta">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href ="#" class="sns_btn" id="facebook">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+						<a href ="#" class="sns_btn" id="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<a href ="#" class="sns_btn" id="line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</aside>
+	<section>
+		<div>
+			<div class="content_wrap">
+				<div class="aboutme">
+					<span class="text">About Me</span>
+					<span class="gradient"></span>
+					<span class="dodge"></span>
+				</div>
+
+				<div class="img_me">
+					<img src="img/poto.jpeg" alt="ME">
+					<div class="job_wrap">
+						<div class="wrap">
+							<span >Do Yeon Kim</span><br>
+							<span >Web Spring Developer</span>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="pofile_wrap">
+					<div class="profile" id="profile1">
+						<div class="aboutme">
+							<span class="text_profile">Profile</span>
+							<span class="gradient"></span>
+							<span class="dodge"></span>
+						</div>
+				</div>
+					</div>
+
+					<div class="icon_wrap">
+						<div class="icon_group">
+							<div class="icon">
+								<i class="fas fa-envelope"></i>
+								<div class="word_wrap">
+									<div class="shape"></div>
+									elquineas@naver.com
+								</div>
+							</div>
+							<div class="icon">
+								<i class="fas fa-map-marker-alt"></i>
+								<div class="word_wrap">
+									<div class="shape"></div>
+									GwangJu, Korea
+								</div>
+							</div>
+							<div class="icon">
+								<i class="fas fa-mobile-alt"></i>
+								<div class="word_wrap">
+									<div class="shape"></div>
+									010-2816-5999
+								</div>
+							</div>
+							<div class="icon">
+								<i class="fas fa-graduation-cap"></i>
+								<div class="word_wrap">
+									<div class="shape"></div>
+									College of Engineering
+								</div>
+							</div>
+							<div class="icon">
+								<i class="fas fa-book"></i>
+								<div class="word_wrap">
+									<div class="shape"></div>
+									BigData, Deep Learning
+								</div>
+							</div>
+							<div class="icon">
+								<i class="fas fa-download"></i>
+								<div class="word_wrap">
+									<div class="shape"></div>
+									Resume Download
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="skills">
+						<div class="aboutme" id="skills1">
+							<span class="text_skills">Technical Skills</span>
+							<span class="gradient"></span>
+							<span class="dodge"></span>
+						</div>
+						<p>Programming(JAVA)</p>
+						<div class="whitebar">
+							<div class="slatebar60"></div>
+							<p><strong>60%</strong></p>
+						</div>
+
+						<p>Web Design(HTML, CSS)</p>
+						<div class="whitebar">
+							<div class="slatebar50"></div>
+							<p><strong>50%</strong></p>
+						</div>
+
+						<p>DateBase(Oracle)</p>
+						<div class="whitebar">
+							<div class="slatebar60"></div>
+							<p><strong>60%</strong></p>
+						</div>
+
+						<p>Web Developer(servlet/JSP, Spring)</p>
+						<div class="whitebar">
+							<div class="slatebar20"></div>
+							<p><strong>20%</strong></p>
+						</div>
+					</div>
+
+					<div class="contact_wrap">
+						<div class="aboutme" id="contact1">
+							<span class="text_contact">Contact</span>
+							<span class="gradient"></span>
+							<span class="dodge"></span>
+						</div>
+
+						<div class="inner_contact">
+							<div class="map" id="map_view" style="width:100%; height: 400px;"></div>
+							<div class="contact">
+								<p>Do you want my programming skills? <br>
+									Fill out the form and fill me in with the datails <br> 
+									:) I love meeting new people</p>
+								<div class="coninfo">
+									<label><i class="fas fa-user-friends"></i> Name</label>
+									<input type="text" name="Name">
+								</div>
+								<div class="coninfo">
+									<label><i class="far fa-envelope"></i> Email</label>
+									<input type="text" name="Email">
+								</div>
+								<div class="coninfo">
+									<label><i class="fas fa-pencil-alt"></i> Message</label>
+									<input type="text" name="Message">
+								</div>
+								<button>Send <i class="fas fa-rocket"></i></button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="gmap.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdsgOTWFj6RCoCzESc316Wribi7l6rBXU&callbackinitMap"
+	type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function(event) {
+				var scrollValue = $(this).scrollTop();
+				if (scrollValue > 350) {
+					$('#topBtn').fadeIn();
+				} else {
+					$('#topBtn').fadeOut();
+				}
+			});
+			$('#topBtn').click(function(event) {
+				$('html, body').animate({scrollTop : 0}, 100);
+			});
+
+			var state = false;
+			$('.close_btn').click(function(event) {
+				if(!state){
+					$('.side_wrap').css('left', '-15%').css('transition', '.4s');
+					$('.content_wrap').css('padding-left', '0px');
+					$('.close_btn').html('<i class="fas fa-angle-right"></i>');
+					state = true;
+				} else {
+					$('.side_wrap').animate({left : '0'}, 300);
+					$('.content_wrap').css('padding-left', '15%');
+					$('.close_btn').html('<i class="fas fa-angle-left"></i>');
+					state = false;
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

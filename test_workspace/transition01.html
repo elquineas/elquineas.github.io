@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transition01.html</title>
+	<style type="text/css">
+		/* transition 전환프로퍼티 전환시간 */
+		span{
+			transition: font-size, color;
+			transition-duration: 5s;
+		}
+		span:hover{
+			font-size : 500%;
+			color : skyblue;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- transtion이란 HTML태그에 적용된 CSS3 프로퍼티값을 변환할 때
+	값의 변화를 서서히 진행시켜 애니메이션 효과를 내는 것이며 1회만 이루어진다. -->
+	<span>축하합니다.</span>
+</body>
+</html>

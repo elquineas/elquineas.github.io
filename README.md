@@ -68,7 +68,7 @@
 
 1. 로그인 - login.html, login.css
 2. 회원가입 - join.html, join.css
-3. 아이디/비번찾기
+3. 아이디/비번찾기 -
 4. 설정, 회원설정
 
 ## Main Color

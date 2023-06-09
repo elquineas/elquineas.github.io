@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index.html</title>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+		body{
+			font-family: 'Nanum Gothic Coding', monospace;
+			margin: 0px;
+			padding: 0px;
+			letter-spacing: -1px;
+		}
+		ul{
+			margin: 0px;
+			padding: 0px;
+			list-style-type: none; 
+		}
+		div{
+			margin: 0px;
+			padding: 0px;
+		}
+		a:link, a:visited{
+			color: inherit;
+		}
+		a{ text-decoration: none; padding: 0; }
+		.header_menu{
+			width: 100%;
+			background-color: #a5dff9;
+			height: 35px;
+		}
+		.inner_header_menu{
+		}
+		.header_sns{
+			float: left;
+			height: 35px;
+		}
+		.header_sns  i {
+			color: #30A9DE;
+			font-size: 2em;
+			padding: 0 1px;
+			line-height: 35px;
+			/*line-height는 길이를 똑같이 줘야 중앙으로 이동*/
+		}
+		.header_member{
+			float: right;
+		}
+		.header_member li{
+			float: left;
+			/*float은 보이는영역이 다름*/
+		}
+		.header_member ul > li> a{
+			color : darkgray;
+			text-decoration: none;
+			line-height: 35px;
+			font-size: 1.2em;
+			padding: 0 15px;
+			height: 32px;
+			display: inline-block;
+		}
+		.header_member ul > li:hover{
+/*			background-color:#30A9DE;
+			border-top: 3px solid #30A9DE;*/
+
+		}
+		.header_member ul > li:hover a{
+			color:white;
+			/*text-decoration: underline;*/
+		}
+		.inner_header{
+			max-width: 1440px;
+			margin: 0px auto;		
+		}
+		.inner_header2{
+			max-width: 1438px;
+			margin: 0px auto;	
+			border: 1px solid black;	
+		}
+		.header_logo{
+			opacity: ;
+			width: 100%;
+		}
+		.header_nav{
+			width: 100%;
+			background-color: white;
+			height: 50px;
+		}
+		.dropdown {
+			position: relative;
+			width: 100%;
+			/*overflow: hidden;*/
+		}
+
+		.dropdown > li{
+			margin-right: 5px;
+			line-height: 50px;
+			text-align: center;
+			width: 120px;
+			float: left;
+			box-sizing: border-box;
+			/*border: 1px solid black;*/
+			border-radius: 20px 20px 0 0;
+
+		}
+		.dropdown > li > a {
+			font-size: 1em;
+			text-decoration: none;	
+			color: gray;
+		}
+		.center1{
+			text-align: center;
+			margin: 0px auto;
+		}
+		.dropdown > li:hover{
+			cursor: pointer;
+			font-weight: 600;
+			border-bottom: 0;
+			box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.2),
+						3px 4px 20px 0px rgba(0,0,0,0.19);
+		}
+		.dropdown > li:hover .body{
+			background-color: green;
+		}
+		.dropdown > li:hover > a{
+			color:gray;
+		}
+		.dropdown2 {
+			position: absolute;
+			text-align: left;
+			display: none;
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			background-color: #FFB85A;
+			left:0px;
+		}
+		.yel{background-color: #FEFAA1}
+		.gre{background-color: #E4F7BA}
+		.sky{background-color: skyblue}
+		.pur{background-color: #D9E5FF}
+		.red{background-color: #FFA7A7}
+
+		.dropdown2 > a{
+			color: #5D5D5D;
+			display: block;
+			text-decoration: none;
+			padding: 0 10px; 
+		}
+		.dropdown li:hover .dropdown2{
+			display: block;
+/* 			box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.2),
+			3px 4px 20px 0px rgba(0,0,0,0.19); */
+		}
+		.dropdown2 a:hover{
+			background-color: #EAEAEA; 
+			color: darkgray;
+		}
+		
+		.body{
+			margin-top: 200px; 
+			/*border: 1px solid black;*/
+			height: 380px;
+		}
+		.normal {
+			border-bottom: 0;
+		}
+		#allfood{
+			display: block;
+		}
+
+
+		#footer{
+			width: 100%;
+			padding: 20px 0; 
+		}
+		#footer *{
+			font-size: 10px;
+			line-height: normal;
+			list-style: none;
+			color: #333;
+		}
+		#footer > ul {
+			margin: 0 auto 10px;
+			text-align: center;
+		}
+		#footer > ul > li{
+			display: inline-block;
+			padding: 0 5px 0 7px;
+			border-left: 1px solid #dadada;
+		}
+		#footer > ul > li:first-child{
+			border-left: 0px;
+		}
+		#address{
+			position: relative;
+			margin: 0px auto;
+			text-align: center;
+		}
+		
+		footer{
+			position: absolute;
+			bottom: 0;
+			left:50%;
+			transform: translate(-50%, 0%);
+		}
+/*		first-child 첫번째
+		last-child 마지막번째
+		nth-child(n) n번째*/
+		
+		#footer > ul > li a:hover{
+			color:#1fbc02;
+			text-decoration: underline;
+		}
+		#addr_logo{
+			position: absolute;
+			bottom: 0;
+			width: 50px;
+			height: 15px;
+			line-height: 22px;
+			display: inline-block;
+		}
+
+
+#feee7d
+#ABF200
+#E4F7BA
+#D9E5FF
+#86F2DD
+#FEFAA1
+#62C4FE
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header_menu">
+			<div class="inner_header inner_header_menu">
+				<div class="header_sns">
+					<a href ="#"><i class="fab fa-instagram"></i></a>
+					<a href ="#"><i class="fab fa-twitter-square"></i></a>
+					<a href ="#"><i class="fab fa-facebook-square"></i></a>
+					<a href ="#"><i class="fab fa-google-plus-square"></i></a>
+					<a href ="#"><i class="fab fa-line"></i></a>
+				</div>
+
+				<div class="header_member">
+					<ul>
+						<li><a href="login.html">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#">고객센터</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header_logo">
+			<div class="inner_header center1">
+				<img src="images/logo2-2.png" alr="로고이미지">
+			</div>
+		</div>
+		<div class="header_nav">
+			<div class="inner_header">
+				<ul class="dropdown">
+					<li class="pur" id="normal"><a href="#">전체 요리</a>
+						<div class="dropdown2 pur" id="allfood">
+							<a href="#">재료별</a>
+							<a href="#">나라별</a>
+							<a href="#">조리법별</a>
+							<a href="#">상황별</a>
+						</div>
+					</li>
+					<li class="yel"><a href="#">재료별 요리</a>
+						<div class="dropdown2 yel">
+							<a href="#">닭고기</a>
+							<a href="#">돼지고기</a>
+							<a href="#">소고기</a>
+							<a href="#">야채</a>
+						</div>
+					</li>
+					<li class="sky"><a href="#">나라별 요리</a>
+						<div class="dropdown2 sky">
+							<a href="#">한식</a>
+							<a href="#">중식</a>
+							<a href="#">일식</a>
+							<a href="#">양식</a>
+						</div>
+					</li>
+					<li class="red"><a href="#">조리법별 요리</a>
+						<div class="dropdown2 red">
+							<a href="#">볶음/튀김</a>
+							<a href="#">찜/조림</a>
+							<a href="#">국요리</a>
+							<a href="#">양념/소스</a>
+						</div>
+					</li>
+					<li class="gre"><a href="#">상황별 요리</a>
+						<div class="dropdown2 gre">
+							<a href="#">간식/야식</a>
+							<a href="#">해장요리</a>
+							<a href="#">술안주</a>
+							<a href="#">손님접대요리</a>
+						</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="body inner_header2"></div>
+
+		<footer>
+			<div id="footer">
+				<ul>
+					<li><a href="#">이용약관</a></li>
+					<li><strong><a href="#">개인정보처리방침</a></strong></li>
+					<li><a href="#">책임의 한계와 법적고지</a></li>
+					<li><a href="#">회원정보 고객센터</a></li>
+				</ul>
+
+				<div id="address">
+					<span>
+						<a href="#">
+							<img src="images/logo2.png" id="addr_logo">
+						</a>
+					</span>
+					<span>Copyright</span>
+					<span>ⓒ</span>
+					<span><strong><a href="#">MAKEFREE Corp.</a></strong></span>
+					<span>All Rights Reserved.</span>
+				</div>
+			</div>
+		</footer>
+
+
+	</header>
+</body>
+</html>

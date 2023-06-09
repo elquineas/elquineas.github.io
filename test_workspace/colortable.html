@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>colortable.html</title>
+		<style type="text/css">
+			table{
+				border-collapse: collapse;
+				width: 100%
+			}
+
+			th, td{
+				text-align: left;
+				padding: 8px;
+			}
+			th{
+				background-color: dodgerblue;
+				color: white;
+			}
+			tr:nth-child(odd) { /* odd는 홀수 even은 짝수 */
+				background-color: #B2CCFF;
+			}
+			tr:hover {
+				background-color: tomato;
+			}
+
+			
+		</style>
+</head>
+<body>
+	<h2>Color Table</h2>
+	<hr>
+	<table>
+		<tr>
+			<th>PokemonName</th>
+			<th>Type</th>
+			<th>Power</th>
+		</tr>
+		<tr class="hover">
+			<td>디아루가</td>
+			<td>강철, 드래곤</td>
+			<td>98</td>
+		</tr>
+		<tr class="hover">
+			<td>레쿠쟈</td>
+			<td>비행, 드래곤</td>
+			<td>95</td>
+		</tr>
+		<tr class="hover">
+			<td>망나뇽</td>
+			<td>비행, 드래곤</td>
+			<td>93</td>
+		</tr>
+		<tr class="hover">
+			<td>보만다</td>
+			<td>비행, 드래곤</td>
+			<td>93</td>			
+		</tr>
+	</table>
+
+</body>
+</html>

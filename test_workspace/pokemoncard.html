@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pokemoncard.html</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #f9fafb;
+		}
+		.pokemargin{
+			display: block;
+			margin: 20px;
+
+		}
+		.card{
+			width: 250px;
+			height: 300px;
+			background-color: white;
+			margin: 0px;
+			padding: 7px;
+			display: inline-block;
+			border: 1px solid rgba(0,0,0,0.3);
+			box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+			box-sizing: border-box;
+		}
+		.type_info{
+			text-align: right;
+		}
+		.type{
+			width: 50px;
+			height: 20px;
+			text-align: center;
+			font-size: 12px;
+			color : white;
+			display: inline-block;
+			border-radius: 10px;
+			/*float: right;*/
+		}
+		.grass{	background-color: #78C850; }
+		.poison{ background-color: #A040A0; }
+		.fire{ background-color: #F08030; }
+		.water{ background-color: #00aeff; }
+		.normal{ background-color:#A8A878; }
+		.thunder{ background-color: #F8D030; }
+		.esper{ background-color: #F85888; }
+		.evil{ background-color: #705848 }
+		.fairly{ background-color: #EE99AC; }
+		.ice{background-color: #98D8D8; }
+
+		.name_info{
+			font-weight: 700;
+			padding: 5px 0;
+			border-bottom: 1.5px solid rgba(0,0,0,0.2);
+		}
+		.pokemon{
+			display: block;
+			margin: 0 auto;
+		}
+		table{
+			width: 225px;
+			background-color: #D4F4FA;
+			border-collapse: collapse;
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
+		th{
+			text-align: left;
+			width: 60px;
+		}
+		td{
+			text-align: right;
+		}
+		table, th, td{
+			border:1px solid lightgray;
+		}
+		.detail_info{
+			padding-bottom: 5px;
+			border-bottom: 2px solid rgba(0,0,0,0.2);
+		}
+		.link_info{
+			text-align: right;
+			padding-top: 1px; 
+		}
+		.like_span{
+			background-image: url("images/pokemon/ic_favorite.png");
+			background-repeat: no-repeat;
+			padding-left: 18px;
+			line-height: 17px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div class="pokemargin">
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type grass">풀</span>
+				<span class="type poison">독</span>
+			</div>
+			<div class ="name_info">No.001 이상해씨</div>
+			<div class ="image_info">
+				<img src="images/pokemon/001.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>씨앗 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.7m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>6.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">500</span>
+			</div>
+		</div>
+		
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type grass">풀</span>
+				<span class="type poison">독</span>
+			</div>
+			<div class ="name_info">No.002 이상해풀</div>
+			<div class ="image_info">
+				<img src="images/pokemon/002.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>씨앗 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.2m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>20kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">320</span>
+			</div>
+		</div>
+
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type grass">풀</span>
+				<span class="type poison">독</span>
+			</div>
+			<div class ="name_info">No.003 이상해꽃</div>
+			<div class ="image_info">
+				<img src="images/pokemon/003.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>씨앗 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>3.3m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>100kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">680</span>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="pokemargin">
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type fire">불꽃</span>
+			</div>
+			<div class ="name_info">No.004 파이리</div>
+			<div class ="image_info">
+				<img src="images/pokemon/004.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>도롱뇽 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.6m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>8.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">1000</span>
+			</div>
+		</div>
+		
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type fire">불꽃</span>
+			</div>
+			<div class ="name_info">No.005 리자드</div>
+			<div class ="image_info">
+				<img src="images/pokemon/005.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>화염 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.1m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>18kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">320</span>
+			</div>
+		</div>
+
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type fire">불꽃</span>
+			</div>
+			<div class ="name_info">No.006 리자몽</div>
+			<div class ="image_info">
+				<img src="images/pokemon/006.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>화염 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.7m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>90.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">2000</span>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="pokemargin">
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type water">물</span>
+			</div>
+			<div class ="name_info">No.007 꼬부기</div>
+			<div class ="image_info">
+				<img src="images/pokemon/007.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>꼬마거북 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.5m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>9kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">1680</span>
+			</div>
+		</div>
+		
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type water">물</span>
+			</div>
+			<div class ="name_info">No.008 어니부기</div>
+			<div class ="image_info">
+				<img src="images/pokemon/008.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>거북 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.0m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>22.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">520</span>
+			</div>
+		</div>
+
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type water">물</span>
+			</div>
+			<div class ="name_info">No.009 거북왕</div>
+			<div class ="image_info">
+				<img src="images/pokemon/009.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>껍질 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.6m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>85.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">1560</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="pokemargin">
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type normal">노말</span>
+			</div>
+			<div class ="name_info">No.133 이브이</div>
+			<div class ="image_info">
+				<img src="images/pokemon/이브이.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>진화 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.3m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>6.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">800</span>
+			</div>
+		</div>
+		
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type water">물</span>
+			</div>
+			<div class ="name_info">No.134 샤미드</div>
+			<div class ="image_info">
+				<img src="images/pokemon/샤미드.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>거품뿜기 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.0m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>29.0kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">3520</span>
+			</div>
+		</div>
+
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type thunder">전기</span>
+			</div>
+			<div class ="name_info">No.135 쥬피썬더</div>
+			<div class ="image_info">
+				<img src="images/pokemon/쥬피썬더.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>번개 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.8m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>24.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">3500</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="pokemargin">
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type fire">불꽃</span>
+			</div>
+			<div class ="name_info">No.136 부스터</div>
+			<div class ="image_info">
+				<img src="images/pokemon/부스터.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>불꽃 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.9m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>25.0kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">800</span>
+			</div>
+		</div>
+		
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type esper">에스퍼</span>
+			</div>
+			<div class ="name_info">No.196 에브이</div>
+			<div class ="image_info">
+				<img src="images/pokemon/에브이.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>태양 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.9m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>26.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">3520</span>
+			</div>
+		</div>
+
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type evil">악</span>
+			</div>
+			<div class ="name_info">No.197 블래키</div>
+			<div class ="image_info">
+				<img src="images/pokemon/블래키.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>달빛 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.0m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>27.0kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">3500</span>
+			</div>
+		</div>
+	</div>
+------------
+	<div class="pokemargin">
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type grass">풀</span>
+			</div>
+			<div class ="name_info">No.470 리피아</div>
+			<div class ="image_info">
+				<img src="images/pokemon/리피아.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>심록 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.0m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>25.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">800</span>
+			</div>
+		</div>
+		
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type ice">얼음</span>
+			</div>
+			<div class ="name_info">No.471 글레이시아</div>
+			<div class ="image_info">
+				<img src="images/pokemon/글레이시아.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>태양 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>0.9m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>26.5kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">3520</span>
+			</div>
+		</div>
+
+		<div class = "card">  
+			<div class ="type_info">
+				<span class="type fairly">페어리</span>
+			</div>
+			<div class ="name_info">No.700 님피아</div>
+			<div class ="image_info">
+				<img src="images/pokemon/님피아.png" class="pokemon">
+			</div>
+			<div class ="detail_info">
+				<table>
+					<tr>
+						<th>분류</th>
+						<td>달빛 포켓몬</td>
+					</tr>
+					<tr>
+						<th>키</th>
+						<td>1.0m</td>
+					</tr>
+					<tr>
+						<th>몸무게</th>
+						<td>27.0kg</td>
+					</tr>
+				</table>
+			</div>
+			<div class ="link_info">
+				<span class="like_span">3500</span>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>

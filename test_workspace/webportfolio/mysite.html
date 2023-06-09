@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mysite</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="common.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+		@import url('mysite_style.css');
+	</style>
+	<script type="text/javascript" src="gmap.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdsgOTWFj6RCoCzESc316Wribi7l6rBXU&callbackinitMap"
+	type="text/javascript"></script>
+	
+</head>
+<body onload="initialize()"> 
+	<aside>
+		<div class="side_wrap">
+			<div class="inner_side">
+				<div class="close_btn">
+					<i class="fas fa-angle-left"></i>
+				</div>
+				<div class="sheader">
+					<h1>Mr.Do Yeon<br>
+					Programmer</h1>
+				</div>
+
+				<div class="smenu">
+					<div class="inner_smenu">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Me</a></li>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Skills</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="sfooter">
+					<div class="sns_wrap" >
+						<a href ="#" class="sns_btn">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href ="#" class="sns_btn" id="facebook">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+						<a href ="#" class="sns_btn" id="youtube">
+							<i class="fab fa-youtube"></i>
+						</a>
+						<a href ="#" class="sns_btn" id="line">
+							<i class="fab fa-line"></i>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</aside>
+	<section>
+		<div class="content_wrap">
+			<div class="aboutme">
+				<h2><b>About Me</b></h2>
+				
+				<img src="img/poto.jpeg" alt="ME">
+				<div class="job_wrap">
+					<div class="neon_wrap">
+						<span class="text text1">Do Yeon Kim</span><br>
+						<span class="text text2">Web Spring Developer</span>
+						<span class="gradient"></span>
+						<span class="dodge"></span>
+					</div>
+				</div>
+			</div>
+			<div class="pofile_wrap">
+				<div class="profile">
+					<h2><b>Profile</b></h2>
+				</div>
+
+				<div class="icon_wrap">
+					<div class="icon_group">
+						<div class="icon">
+							<i class="fas fa-envelope"></i>
+							<div class="word_wrap">
+								<div class="shape"></div>
+								elquineas@naver.com
+							</div>
+						</div>
+						<div class="icon">
+							<i class="fas fa-map-marker-alt"></i>
+							<div class="word_wrap">
+								<div class="shape"></div>
+								GwangJu, Korea
+							</div>
+						</div>
+						<div class="icon">
+							<i class="fas fa-mobile-alt"></i>
+							<div class="word_wrap">
+								<div class="shape"></div>
+								010-2816-5999
+							</div>
+						</div>
+						<div class="icon">
+							<i class="fas fa-graduation-cap"></i>
+							<div class="word_wrap">
+								<div class="shape"></div>
+								College of Engineering
+							</div>
+						</div>
+						<div class="icon">
+							<i class="fas fa-book"></i>
+							<div class="word_wrap">
+								<div class="shape"></div>
+								BigData, Deep Learning
+							</div>
+						</div>
+						<div class="icon">
+							<i class="fas fa-download"></i>
+							<div class="word_wrap">
+								<div class="shape"></div>
+								Resume Download
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="skills">
+					<h2><b>Technical Skills</b></h2>
+					<p>Programming(JAVA)</p>
+					<div class="whitebar">
+						<div class="slatebar60"></div>
+						<p><strong>60%</strong></p>
+					</div>
+					<p>Web Design(HTML, CSS)</p>
+					<div class="whitebar">
+						<div class="slatebar50"></div>
+						<p><strong>50%</strong></p>
+					</div>
+					<p>DateBase(Oracle)</p>
+					<div class="whitebar">
+						<div class="slatebar60"></div>
+						<p><strong>60%</strong></p>
+						
+					</div>
+					<p>Web Developer(servlet/JSP, Spring)</p>
+					<div class="whitebar">
+						<div class="slatebar20"></div>
+						<p><strong>20%</strong></p>
+					</div>
+				</div>
+
+				<div class="contact_wrap">
+					<h2><b>Contact</b></h2>
+					<div class="inner_contact">
+						<div class="map" id="map_view" style="width:100%; height: 400px;"></div>
+						<div class="contact">
+							<p>Do you want my programming skills? <br>
+								Fill out the form and fill me in with the datails <br> 
+								:) I love meeting new people</p>
+							<div class="coninfo">
+								<label>Name</label>
+								<input type="text" name="Name">
+							</div>
+							<div class="coninfo">
+								<label>Email</label>
+								<input type="text" name="Email">
+							</div>
+							<div class="coninfo">
+								<label>Message</label>
+								<input type="text" name="Message">
+							</div>
+							<button>Send <i class="fas fa-rocket"></i></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</body>
+</html>

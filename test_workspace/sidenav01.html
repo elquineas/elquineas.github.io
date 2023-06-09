@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>side</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.sidebar_wrap{
+			background-color: #f1f1f1;
+			width: 180px;
+			/*overflow: auto;*/
+			color: #000;
+			height: 100%;
+			box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2),
+						0px 4px 10px 0px rgba(0,0,0,0.19);
+			position: fixed;
+			left: 0px;
+		}
+		.sidebar_title{
+			background-color: orange;
+			color: white;
+			overflow: hidden;
+ 		}
+		.sidebar_title span{
+			padding: 16px;
+			border: none;
+			display: block;
+			float: left;
+		}
+		.sidebar_title button{
+			padding: 16px;
+			border: none;
+			display: block;
+			overflow: hidden;
+			height: 54px;
+			font-size: 20px;
+			float: right;
+			background-color: orange;
+			cursor: pointer;
+		}
+		.sidebar_title button:hover {
+			background-color: orangered;
+		}
+		.sidebar_content  a{
+			display: block;
+			padding: 10px 16px;
+			text-decoration: none;
+			text-align: left;
+		}
+		.sidebar_content a:not(#home){
+			color: black;
+		}
+		.sidebar_content a:hover {
+			background-color: lightgray;
+		}
+		.dropdown_wrap{
+			position: relative;
+			/*background-color: white;*/
+			color: black;
+			width: 100%;
+			display: inline-block;
+		}
+		.dropdown{
+
+			display: none;
+			width: 100%;
+			position: absolute;
+			box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2),
+						0px 4px 20px 0px rgba(0,0,0,0.19);
+			margin: 0px;
+			padding: 0px;
+			top: 0;
+			left: 100%;
+
+		}
+		.dropdown > a{		
+			width: 100%;
+			text-align: left;
+			padding: 8px 0 8px 16px;
+			background-color: white; 
+			color: black;
+			box-sizing: border-box;
+		}
+
+
+		#home{
+			color: white;
+			background-color: #FFCD12;
+		}
+		.dropdown_wrap:hover .dropdown{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="sidebar_wrap">
+		<div class="sidebar_title">
+			<span>Content</span>
+			<button><i class="fas fa-sign-out-alt"></i></button>
+		</div>
+		<div class="sidebar_content">
+			<a href="#" id="home">HOME</a>
+			<a href="#">즐겨찾기</a>
+			<a href="#">상품문의</a>
+			<div class="dropdown_wrap ">
+				<a href="#">배송추적</a>
+				<div class="dropdown">
+					<a href="#">운송장번호 추적</a>
+					<a href="#">택배사로 추적</a>
+					<a href="#">전화번호로 추적</a>
+				</div>
+			</div>
+			<a href="#">회원혜택</a>
+			<a href="#">이벤트</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			font-family: sans-serif;
+			background: #262626;
+		}
+		img{
+			width: 100px;
+			height: 110px;
+		}
+		.testimonials{
+			margin: 200px auto 100px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+			grid-gap: 20px;
+		}
+		.testimonials .card{
+			position: relative;
+			width: 350px;
+			margin: 0 auto;
+			background: #333;
+			padding: 20px;
+			box-sizing: border-box;
+			text-align: center;
+			box-shadow: 0 10px 40px rgba(0,0,0,.5);
+			overflow: hidden; 
+		}
+		.testimonials .card .layer{
+			position: absolute;
+			top: calc(100% - 2px);
+			/*calc 사칙연산을 할 수 있게 해줌 100%에서 -2px 을 해줌*/
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(#03a9f4, #e91ee3);
+			z-index: 1;
+			transition: 0.5s; 
+		}
+		.testimonials .card:hover .layer{
+			top: 0px;
+		}
+		.testimonials .card .content{
+			position: relative;
+			z-index: 2;
+		}
+		.testimonials .card .content p{
+			font-size: 18px;
+			line-height: 24px;
+			color:#fff;
+		}
+		.testimonials .card .content .image{
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			border-radius: 50%;
+			overflow: hidden;
+			border: 4px solid white;
+			box-shadow: 0 10px 40px rgba(0,0,0,.2);
+		}
+		.testimonials .card .content .details h2{
+			font-size: 18px;
+			color: #fff;
+		}
+		.testimonials .card .content .details h2 span{
+			color: #03a9f4;
+			font-size: 14px;
+			transition: 0.5s;
+		}
+		.testimonials .card:hover .content .details h2 span{
+			color: #fff;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="testimonials">
+		<div class="card">
+			<div class="layer"></div>
+			<div class="content">
+				<p>Lorem Ipsum is simply dummy text of the
+					printing and typesetting industry. Lorem Ipsum
+					has been  the industry's standard dummy text ever
+					since the 1500s</p>
+				<div class="image">
+					<img src="../images/지효.jpg">
+				</div>
+				<div class="details">
+					<h2>Someone Famous<br>
+					<span>Website Designer</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="layer"></div>
+			<div class="content">
+				<p>Lorem Ipsum is simply dummy text of the
+					printing and typesetting industry. Lorem Ipsum
+					has been  the industry's standard dummy text ever
+					since the 1500s</p>
+				<div class="image">
+					<img src="../images/정은지.png">
+				</div>
+				<div class="details">
+					<h2>Someone Famous<br>
+					<span>Website Designer</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="layer"></div>
+			<div class="content">
+				<p>Lorem Ipsum is simply dummy text of the
+					printing and typesetting industry. Lorem Ipsum
+					has been  the industry's standard dummy text ever
+					since the 1500s</p>
+				<div class="image">
+					<img src="../images/아이유.jpg">
+				</div>
+				<div class="details">
+					<h2>Someone Famous<br>
+					<span>Website Designer</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

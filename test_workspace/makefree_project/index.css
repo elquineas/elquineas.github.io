@@ -1,0 +1,621 @@
+@charset "utf-8";
+		*{
+			margin: 0px; 
+			padding: 0px;
+		}
+		body{
+			/*border: 2px solid green;*/
+			max-width: 100%;
+			height: 100vh;
+			/*background: #f1f1f1;*/
+
+		}
+		body > div{
+			/*border: 2px solid red;*/
+			height: 100vh;
+		}
+		ul, li, a{
+			text-decoration: none;
+			list-style: none; 
+		}
+/*		.header > ul{
+			border: 1px solid #343434;
+		} 경계선 확인 */
+		.headerleft{
+			height: 100px;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.header{
+			/*border-bottom: 2px solid lightgray;*/
+			height: 50px;
+			width: 100%;
+			display: flex;
+			justify-content: flex;
+		}
+		.header > ul{
+			width: 100%;
+			padding: 5px auto;
+			/*border: 2px solid black;*/
+			display: flex;
+			justify-content: flex-end;
+			text-align: center;
+		}
+		.header > ul > li{
+			display: flex;
+			/*border: 1px solid #343434;*/
+			line-height: 50px;
+			text-align: center;
+			flex-grow: 1;
+		}
+		.header > ul > li> a{
+			width: 100%;
+			height: 50%;
+			padding: 10px;
+		}
+/*		.header > ul > li:hover{
+			background-color: lightgray;
+		}*/
+
+/*		.all_wrap{
+			width: 1440px;
+		}*/
+
+
+		/*-----------서치박스------------*/
+		.search{
+			/*border: 2px solid black;*/
+			top: 10px;
+			right: 0;
+			height: 50px;
+			width: 100%;
+			text-align: center;
+			font-size: 30px;
+			margin: 30px 0; 
+		}
+		.search > form{
+			background-color: white;
+			margin: 0 auto;
+			border: 2px solid #9e9e9e;
+			border-radius: 30px;
+			width: 350px;
+		}
+		.search_box{
+			border-radius: 30px;
+			display: inline-block;
+			position: relative;
+			/*border: 2px solid red;*/
+			height: 30px;
+			width: 350px;
+		}
+		.search_in{
+			border: none;
+			background: none;
+			outline: none;
+			float: left;
+			margin-left: 20px;
+			font-size: 25px;
+		}
+		.search_box > a > i{
+			font-size: 34px;
+			position: absolute;
+			top:0;
+			right: 0;
+			margin-right: 10px; 
+			color: gray;
+
+		}
+		.search_box > a > i:hover{
+			transition: .5s;
+			color: black;
+		}
+
+
+
+		/*----------사이드바-----------*/
+		.sidebar{
+			position: fixed;
+			display: inline-block;
+			/*border: 2px solid blue;*/
+			height:100%; 
+			width: 310px;
+			bottom: 0;
+			left: 150px;
+			background-color: white;
+		}
+
+		.menu{
+			text-align: center;
+			/*height: 100vh;*/
+			/*border: 2px solid #C900A7;*/
+			/*border-right: 2px solid #C900A7;*/
+		}
+		#logo{
+			margin-top: 40px; 
+			width: 100%;
+			height: 100px;
+			cursor: pointer;
+
+		}
+
+		/*---------로그인버튼------------*/
+		.header{
+			margin-top: 30px; 
+			width: 100%;
+			/*background-color: red;*/
+		}
+		.header > ul{
+			width: 100%;
+			padding: 0 10px;
+
+		}
+		.header > ul > li{
+			display: inline-block;
+			text-align: center;
+			font-size: 15px;
+		}
+		.header > ul > li > a{
+			background: lightgray;
+			border-radius: 20px;
+			/*border: 1px solid red;*/
+			height: 100%;
+			padding: 15px;
+		}
+		.best_content{
+			margin-top: 30px; 
+			border-left: 1px solid lightgray;
+			padding-left: 15px; 
+			height: 75%;
+			display: flex;
+			flex-direction: column;
+		}
+		.best_content > div > img{
+			width: 100%;
+			height: 80%;
+			/*height: 50%;*/
+		}
+		.best_content > div > div{
+			/*border: 1px solid #128373;*/
+			height: 20%;
+		}
+		.best_content > span {
+			margin-top: 30px;
+			line-height: 45px;
+			font-size: 1.5em;
+			flex:1;
+			width: 100%;
+			text-align: center;
+		}
+		.best_content > div {
+			flex: 5;
+			/*border: 1px solid blue;*/
+			text-align: center;
+		}
+		.login_btn{
+			/*background-color: #f3f3f3;*/
+			position: relative;
+			font-size: 15px;
+			margin: 0 10px;
+			/*border: 2px solid red;*/
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			cursor: pointer;
+			text-align: center;
+			line-height: 68px;
+			color: white;
+			background-color: skyblue;
+		}
+		.login_btn:hover{
+/*			box-shadow: 0 5px 15px -5px #00000070;
+			border-right: 1px solid gray;
+			border-bottom: 1px solid gray;
+			border-top: 1px solid gray;
+			border-left: 1px solid gray;*/
+			/*animation: login_animate 1s linear infinite;*/
+			color: coral;
+		}
+		.login_btn:hover .login_account{
+			transition: opacity 1s;
+			opacity: 1;
+
+		}
+		.word_wrap{
+			position: relative;
+			text-align: center;
+			line-height: 30px;
+			margin-top: 20px;
+			border: 1px solid red;
+			border-radius: 30px;
+			height: 30px;
+			width: 100px;
+		}
+		.word_wrap:before{
+			position: absolute;
+			border: 1px solid red;
+			width: 5px; 
+			height: 5px;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			transform: rotate(45deg);
+		}
+
+
+/*--------------------------------------------------*/
+/* 로그인 설명 */
+.login_account{
+	/*display: none;*/
+	opacity: 0;
+	background-color: skyblue;
+	color: white;
+	/*border: 1px solid black;*/
+	position: absolute;
+	left: -20px;
+	top: 80px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 25px;
+	z-index: 2;
+}
+
+.login_box{
+	background-color: skyblue;
+	position: absolute;
+	/*border-top: 1px solid black;*/
+	/*border-left: 1px solid black;*/
+	width: 10px;
+	height: 10px;
+	top: -6px;
+	left: 50%;
+	transform: translate(-50%) rotate(45deg);
+	z-index: 3;
+}
+
+
+
+
+
+/*		.login_btn:hover:before{
+			animation: login_animate 1s linear;
+		}*/
+/*		.login_btn:hover:after{
+			animation: login_animate 1s linear infinite;
+		}*/
+		.login_btn:before{
+			overflow: hidden;
+			content: '';
+			border-radius: 20px;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			right: -1px;
+			bottom: -1px;
+			/*background: blue;*/
+			z-index: -1;
+		}
+		.login_btn:after{
+			content: '';
+			border-radius: 20px;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			right: -1px;
+			bottom: -1px;
+			/*background: #fff;*/
+			z-index: -2;
+			/*filter: blur(3px);*/
+		}
+/*		.login_btn:before, .login_btn:after{
+			background: linear-gradient(45deg, #CEFBC9, #FFD8D8, #D9E5FF);
+		}*/
+		@keyframes login_animate{
+			0%{ transform: scale(1); }
+			40%{ transform: scale(1.1);}
+			90%{ transform: scale(0.9);}
+			100%{ transform: scale(1);}
+		}
+
+
+
+		/*------sns 버튼-------*/
+		.btn{
+			display: inline-block;
+			width: 45px;
+			background-color: #f1f1f1;
+			border-radius: 30%;
+			box-shadow: 0 5px 15px -5px #00000070;
+			/*color: #30A9DE;*/
+			overflow: hidden;
+			position: relative;
+		}
+		.sns{
+			display: inline-block;
+			position: absolute;
+			width: 100%;
+			bottom: 20px;
+			font-size: 2.3em;
+			text-align: center;
+			line-height: 55px;
+		}
+		.sns > a{
+			width: 60px;
+			height: 60px;
+		}
+		.btn i{
+			line-height: 40px;
+			transition: .2s linear;
+		}
+		.btn:hover i{
+			transform: scale(1.3);
+			color: #f1f1f1;
+		}
+		.insta{color: #BD24A9;}
+		.facebook{color: #4374D9;}
+		.youtube{color: #FF0000;}
+		.line{color: #1fbc02;}
+
+		.insta:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #BD24A9;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		.facebook:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #4374D9;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		.youtube:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #FF0000;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+		.line:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #1fbc02;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}
+
+		/*.btn:before{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background-color: #4374D9;
+			transform: rotate(45deg);
+			left: -120%;
+			top: 80%;
+		}*/
+		.btn:hover:before{
+			animation: aaa 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		@keyframes aaa{
+			0%{
+				left:-110%;
+				top:90%;
+			}
+			50%{
+				left: 10%;
+				top: -30%;
+			}
+			100%{
+				left: -10%;
+				top: -10%;
+			}
+		}
+
+		/*-------------사이드 메뉴-----------------*/
+		.side_menu{
+			width: 308px;
+			/*border-radius: 8px;*/
+			/*border: 1px solid black;*/
+		}
+		#best_menu{
+			position: fixed;
+			top: 0;;
+			right: 150px;
+			/*border: 1px solid red;*/
+		}
+		.menu{
+			/*border: 1px solid black;*/
+			border-radius: 20px;
+			width: 308px;
+			overflow: hidden;
+		}
+		.menu_btn{
+			margin-top: 30px;
+			/*background-color: #faffff;*/
+			/*border: 1px solid #949494;*/
+			border-radius: 30px;
+			display: block;
+			padding: 16px 20px;
+			color: #6799FF;
+			position: relative;	
+		}
+		.item:target .menu_btn{
+			color: coral;
+		}
+		.smenu{
+			/*background-color: #919191;*/
+			overflow: hidden;
+			transition: max-height 0.3s;
+			max-height: 0; 
+		}
+/*		.menu_btn:before{
+			border-radius: 5px;
+			content: "";
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			background-color: #D9E5FF;
+			left: 20px;
+			bottom: -7px;
+			transform: rotate(45deg);
+		}*/
+		.smenu a{
+			display:block;
+			padding:16px 26px;
+			color: black;
+			font-size: 14px;
+			margin: 4px 0;
+			position: relative;
+		}
+		.smenu a:hover{
+			color: coral;
+		}
+		.smenu a:before{
+			content: "";
+			position: absolute;
+			width: 6px;
+			height: 100%;
+			background-color: skyblue;
+			left: 90px;
+			top: 0;
+			transition: 0.3s;
+			opacity: 0;
+		}
+		.smenu a:hover:before {
+			opacity: 1;
+		}
+		.item:target .smenu{
+			max-height: 10em;
+		}
+		/*------------------*/
+/*		#bread{background-color: #CC723D;}
+		#cheese{background-color: #FFE08C;}
+		#meat{background-color: #993800;}
+		#tomato{background-color: tomato;}
+		#veget{background-color: #1DDB16;}*/
+
+
+
+		/*--------------body_wrap--------------*/
+		.body_wrap{
+			/*border: 1px solid black;*/
+			display: flex;
+			justify-content: center;
+		}
+		.body_header{
+			border: 1px solid red;
+			height: 5%;
+		}
+		.body_content{
+			background-color: white;
+			border: 1px solid black;
+			width: 50%;
+		}
+		.food_content{
+			height: 95%;
+			display: flex;
+			border: 1px solid blue;
+		}
+
+		.body_footer{
+			position: relative;
+			height: 10%;
+			text-align: center;
+		}
+		.body_footer > div > a, i{
+			/*color: #222;*/
+			font-size: 30px;
+			margin: 0 10px;
+		}
+		.body_footer > button{
+			position: absolute;
+			top: 8px;
+			right: 10px;
+			width: 100px;
+			height: 30px;
+		}
+
+		.food_img{
+			display: flex;
+			height: 100%;
+			width: 100%;
+			/*border: 1px solid red;*/
+		}
+		.food_account{
+			height: 20%;
+			width: 100%;
+			/*border: 1px solid blue;*/
+			text-align: right;
+			line-height: 20px;
+			font-size: 30px;
+		}
+		.food_account > img {
+			height: 50%;
+		}
+		.food_img > img{
+			position: relative;
+			/*overflow: hidden;*/
+			width: 100%;
+			height: 100%;
+		}
+/*		.recipe{
+			text-align: center;
+			border: 1px solid blue;
+			width: 40%;
+		}*/
+
+		.food_account{
+			text-align: right;
+			padding-top: 1px; 
+		}
+		.like_span{
+			background-image: url("images/ic_favorite.png");
+			background-repeat: no-repeat;
+			padding-left: 18px;
+			line-height: 17px;
+			display: inline-block;
+		}
+		
+		.cleft:before{
+			position: absolute;
+			top: -120%;
+			left: 0%;
+			width: 500px;
+			height: 350px;
+			background-color: black;
+			/*opacity: .2;*/
+		}
+		.cleft:after{
+			position: absolute;
+			top: 105%;
+			left: 0%;
+			width: 500px;
+			height: 350px;
+			background-color: black;
+			/*opacity: .2;*/
+		}
+
+		.cleft:hover .cleft:before{
+			animation: backhover 2s linear infinite;
+		}
+
+		@keyframes backhover{
+			0%{ transform: translaty(0%); }
+			100%{ transform: translaty(100%); }
+		}

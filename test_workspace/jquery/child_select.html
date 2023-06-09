@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//계층필터 선택자
+			// $("p:first-child").css("background-color","yellow");
+			//(뒤에서부터 해석) 첫번째 자식이면서 p태그 인것
+			// $("p:last-child").css("background-color","slateblue");
+			//마지막 자식이면서 p태그 인것
+			// $("p:nth-child(2)").css("color","tomato").css("font-size","25px");
+			//2번째 자식이면서 p태그 인것
+			// 체이닝 기법 .css().css() 뒤에붙여서 씀
+			// 맵방식 .css({"color":"red", "font":"25px"}); 안쪽에 중괄호를 쓰고 콤마로 구분
+			// $("p:nth-child(even)").css("border","5px solid red");
+			//짝수번째 자식이면서 p태그 인것
+			// $("p:nth-child(2n+2)").css("background-color","mediumseagreen");
+			//(2n+2) 2번째와 그 이후 2의 배수번째 자식이면서 p태그 인것
+			// $("span:only-child").css("border","3px dashed blue");
+			//자식이 하나만 있으면서 스판태그 인것
+		});
+	</script>
+</head>
+<body>
+	<p>The first paragraph in body.</p>
+
+	<div style="border:1px solid;">
+		<p>The first paragraph in div.</p>
+		<p>The second paragraph in div.</p>
+		<p>The third paragraph in div.</p>
+		<p>The last paragraph in div.</p>
+	</div><br>
+
+	<div style="border:1px solid;">
+		<span>This is a span element.</span>
+		<p>The first paragraph in  another div.</p>
+		<p>The second paragraph in  another div.</p>
+		<p>The third paragraph in  another div.</p>
+		<p>The last paragraph in  another div.</p>
+	</div>
+
+	<p>The last paragraph in body.</p>
+
+	<div>
+		<span>only-child</span>
+	</div>
+</body>
+</html>

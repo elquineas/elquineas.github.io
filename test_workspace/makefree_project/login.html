@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kakao</title>
+	<style type="text/css">
+		body, ul, h1{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul{list-style: none;}
+		a:link, a:visited{
+			text-decoration: none;
+			color: inherit; 
+		}
+		#wrap{
+			width: 466px;
+			height: 567px;
+			/*border: 1px solid lightgray;*/
+		}
+		#kakao_header{
+			height: 39px;
+			overflow: hidden;
+			padding-top: 16px;
+			border-top: 4px solid tomato;
+			border-bottom: 1px solid #d4d4d4;
+		}
+		h1{
+			float: left;
+			margin-left: 25px;
+		}
+		#kakao_logo{
+			float: left;
+			height: 22px;
+			margin-top: 2px;
+			font-size: 18px;
+			font-weight: normal; 
+		}
+		#kakao_logo > img {
+			width: 71px;
+			height: 21px;
+			float: left;
+			margin-right: 10px;
+		}
+
+		#kakao_logo > span{
+			line-height: 22px;
+		}
+		#kakao_help{
+			float: right;
+			margin-top: 2px;
+			margin-right: 11px;
+		}
+		.list_help > li {
+			float: left;
+			margin-right: 14px;
+		}
+		.list_help > li > a{
+			color: #777;
+			font-size: 13px;
+			letter-spacing: -1px; /*글자간격, 자간*/
+			/*word-spacing:; 단어간격*/
+		}
+		.list_help > li > a:hover{
+			text-decoration: underline;
+		}
+		#login_form{
+			position: relative;
+		}
+		#kakao_content{
+			margin: 10px 0;
+			height: 400px;
+			text-align: center; 
+		}
+		#login_content{
+			width: 270px;
+			height: 394px;
+			padding: 0 25px;
+			border: 1px solid #ddd;
+			text-align: left;
+			display: inline-block;
+		}
+		#login_area{
+			width: 270px;
+			height: 372px;
+			position: relative;
+		}
+		#subtitle{
+			position: relative;
+			height: 18px;
+			margin: 27px auto 12px;
+		}
+		#subtitle > img{
+			width: 60px;
+			height: 18px;
+		}
+		.idpw{
+			padding: 8px 12px;
+			margin-bottom: 8px; 
+			font-size: 13px;
+			font-weight: normal;
+			width: 240px;
+			height: 22px;
+			line-height: 22px;
+			border-radius: 5px;
+			outline: none;
+			border: 1px solid #e5e5e5;
+			background-color: white;
+			color:#333;
+			letter-spacing: -1px;
+		}
+		#login_form > img{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			top: 8px;
+			right: 8px;
+		}
+		#remember{
+			margin: -1px 0 16px;
+		}
+		#remember > input{
+			color: #333;
+			margin: 3px 3px 3px 4px;
+			vertical-align: middle; /*텍스트를 제외한 다른 것들의 위치를 조정*/
+		}
+		#remember > label {
+			font-size: 13px;
+			letter-spacing: -1px;
+		}
+		#btn_login{
+			display: inline-block;
+			width: 268px;
+			border-radius: 5px;
+			border:1px solid tomato;
+			background-color: #FF9436;
+			padding-top: 5px;
+			text-align: center;
+			line-height: 30px;
+			height: 38px;
+		}
+		#container > a{
+			line-height: 
+		}
+		#login_hlep{
+			width: 270px;
+			position: absolute;
+			bottom: 20px;
+			padding-top: 10px;
+			font-size : 12px;
+			letter-spacing: -1px;
+			border-top: 1px solid #cfcfcf;
+		}
+		#login_hlep a{
+			color: #333;
+			letter-spacing: -1px;
+		}
+		#login_hlep a:hover{
+			text-decoration: underline;
+		}
+		.right {
+			display: inline-block;
+			position: absolute;
+			right: 0px;
+		}
+		.right a{
+			color: #777 !important;
+		}
+		.right_bar{
+			display: inline-block;
+			font-size: 11px;
+			color: #ccc;
+			margin: 0 4px;
+		}
+
+		#kakao_footer{
+			padding: 19px 30px 22px;
+			border-top: 1px solid #d4d4d4;
+			font-size: 12px;
+			text-align: center;
+			letter-spacing: -1px;
+		}
+		#footer_link .txt_bar{
+			display: inline-block;
+			width: 1px;
+			height: 8px;
+			margin: 4px 1px 0px 3px;
+			font-size: 11px;
+			background-color: #ccc;
+		}
+		#footer_link .link_info{
+			display: inline-block;
+			line-height: 22px;
+			color: #898989;
+		}
+		.util_cont{
+			position: relative;
+			display: inline-block;
+			font-size: 12px;
+			text-align: center;
+			letter-spacing: -1px; 
+		}
+		.btn_info{
+			display: inline-block;
+			padding: 0px;
+			margin-top: -2px;
+			font-size: 12px;
+			line-height: 22px;
+			color: #898989;
+			border: 0 none;
+			background-color: transparent; 
+			cursor: pointer;
+		}
+		#btn_semo {
+			display: inline-block;
+			font-size: 1px;
+			position: absolute;
+			top: -2px;
+			right: -10px;
+		}
+		#footer_info {
+			margin-top: 5px;
+		}
+		.txt_copyright{
+			font-size: 12px;
+			color: #919191;
+			font-family: helvetica,sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="kakao_header">
+			<h1>
+				<a id="kakao_logo" href="">
+					<!-- <img src="img/kakao_logo.png" alt="로고 이미지"> -->
+					<span>로그인</span>
+				</a>
+			</h1>
+			<div id="kakao_help">
+				<ul class="list_help">
+					<li><a href="#">도움말</a></li>
+					<li><a href="#">문의하기</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="kakao_content">
+			<div id="login_content">
+				<div id="login_area">
+					<div id="subtitle">
+						<!-- <img src="img/kakao_logo.png" alt="로고 이미지"> -->
+					</div>
+					<div id="container">
+						<form name="" action="" method="POST" id="login_form">
+							<input type="text" class="idpw" id="login_id" name="" placeholder="이메일 또는 전화번호">
+							<img src="images/kakao_help.png">
+							<input type="password" class="idpw" id="login_pw" name="" placeholder="비밀번호">
+						</form>
+						<div id="remember">
+							<input type="checkbox" name="" id="ckremember"></input>
+							<label for="ckremember">로그인 상태 유지</label>
+						</div>
+
+						<a href="#" id="btn_login">
+							<!-- <img alt="로그인" src="img/login.png"> -->
+							로그인
+						</a>
+					</div>
+					<div id="login_hlep">
+						<a href="#">회원가입</a>
+						<div class="right">
+							<a href="#">카카오계정 찾기</a>
+							<span class="right_bar">|</span>
+							<a href="#">비밀번호 재설정</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="kakao_footer">
+			<div id="footer_link">
+				<a href="#" class="link_info">공지사항</a>
+				<span class="txt_bar"></span>
+				<a href="#" class="link_info">이용약관</a>
+				<span class="txt_bar"></span>
+				<a href="#" class="link_info">개인정보 처리방침</a>
+				<span class="txt_bar"></span>
+				<a href="#" class="link_info">운영정책</a>
+				<span class="txt_bar"></span>
+				<span class="util_cont">
+					<button type="button" class="btn_info">한국어
+						<span id="btn_semo">▼</span>
+					</button>
+				</span>
+			</div>
+			<div id="footer_info">
+				<small class="txt_copyright">
+					Copyrightⓒ
+					<a href="#" class="link_kakao">kakao corp.</a>
+					All rights reserved.
+				</small>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

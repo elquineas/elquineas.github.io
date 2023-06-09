@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css"></style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				var str = $("p").html();
+				//html문법까지 다 가져옴
+				alert(str);
+				$("p").html("HTML을 넣어봐!");
+			});
+			$("#btn2").click(function() {
+				var str = $("p").text();
+				//text 문자열만 가져옴
+				alert(str);
+				$("p").text("TEXT를 넣어봐!");
+			});
+
+			//input태그에 있는 값을 불러올때는 .val()을 사용해야한다.
+		});
+		
+	</script>
+</head>
+<body>
+	<button id="btn1">HTML COME</button>
+	<button id="btn2">TEXT COME</button>
+	<p>X<b>금지!</b></p>
+</body>
+</html>
