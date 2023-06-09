@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* nav {
+  background-color: blue;
+  color: white;
+} */
+
+a {
+  color: blue;
+  text-decoration: none;
+  display: inline-block;
+  width: 130px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+a:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+a:nth-of-type(2) {
+  background-color: rgb(140, 140, 194);
+  color: white;
+}
+
+a:nth-of-type(1) {
+  background-color: rgb(235, 235, 240);
+  color: black;
+}
+
+.bdate {
+  width: 150px;
+}
+
+section {
+  display: flex;
+}
+
+article {
+  flex: 1;
+  margin: 5px;
+  /* border: 1px solid green; */
+}
+
+footer {
+  background-color: rgb(224, 224, 224);
+  text-align: center;
+  padding: 0.7rem;
+}
+
+body {
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 작성부분 중앙 위치 */
+section.dept {
+  width: 980px;
+  height: 100%;
+  /* border: 1px solid blue; */
+  flex: 1;
+  margin: 3px;
+  /* display: block; */
+  /* border: 1px solid yellow; */
+}
+
+article.dept {
+  width: 1000px;
+  padding: 0px;
+  margin: 0px auto;
+}
+
+article.dept div {
+  /* width: 100%; */
+  display: flex;
+  padding: 0;
+}
+
+article.dept label,
+article.dept input {
+  margin: 3px;
+  padding: 8px;
+}
+
+article.dept label {
+  align-items: center;
+  /* flex: 1; */
+  text-align: right;
+  color: rgb(154, 154, 223);
+  font-weight: bold;
+}
+
+article.dept input {
+  align-items: center;
+  width: 300px;
+  /* flex: 2; */
+
+  /* 동글동글 */
+  border-radius: 7px;
+  border: 1px solid #aaa;
+  outline: 0;
+}
+
+article.dept input:hover {
+  background-color: #ddd;
+}
+
+article.dept input:focus {
+  background-color: #eee;
+}
+
+/* 버튼 위치 조절 */
+div.button_box label {
+  /* flex: 1; */
+  width: 320px;
+}
+
+/* 버튼 위치 */
+div.button_box div {
+  flex: 2;
+  text-align: center;
+  margin: 3px 0;
+  padding: 8px 0;
+}
+
+/* 버튼 크기 */
+div.button_box button {
+  width: 300px;
+  padding: 8px 16px;
+  margin: 8px 8px 8px 0;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+/* 버튼 커서 효과 */
+div.button_box button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+div.button_box button:nth-of-type(1) {
+  background-color: blue;
+  color: white;
+  /* width: 300px; */
+}
+
+div.button_select label {
+  flex: 1;
+}
+
+div.button_select div {
+  flex: 2;
+  text-align: center;
+  margin: 0px 0;
+  padding: 0px 0;
+}
+
+div.button_select button {
+  padding: 8px 16px;
+  margin: 8px 8px 8px 0;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test2</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .calendar {
+        width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      .calendar table {
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+      }
+
+      .calendar th {
+        background-color: lightgray;
+      }
+
+      .calendar td {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .calendar .date {
+        font-weight: bold;
+        color: black;
+        border: 1px solid black;
+      }
+
+      .calendar .weekday {
+        color: gray;
+      }
+
+      .calendar .today {
+        background-color: rgb(209, 209, 202);
+      }
+
+      .calendar input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .calendar input:focus {
+        outline: none;
+        background-color: lightyellow;
+      }
+      .dept {
+        text-align: center;
+      }
+      footer {
+        background-color: rgb(224, 224, 224);
+        text-align: center;
+        padding: 0.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="dept">
+      <img src="mainimage.png" width="1000px" />
+      <p>갓생살기</p>
+    </header>
+    <div class="calendar">
+      <select id="year" onchange="generateCalendar()">
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <!-- Add more options for the years -->
+      </select>
+      <select id="month" onchange="generateCalendar()">
+        <option value="0">1월</option>
+        <option value="1">2월</option>
+        <option value="2">3월</option>
+        <option value="3">4월</option>
+        <option value="4">5월</option>
+        <option value="5">6월</option>
+        <option value="6">7월</option>
+        <option value="7">8월</option>
+        <option value="8">9월</option>
+        <option value="9">10월</option>
+        <option value="10">11월</option>
+        <option value="11">12월</option>
+      </select>
+      <table id="calendarTable">
+        <tr>
+          <th class="weekday">일</th>
+          <th class="weekday">월</th>
+          <th class="weekday">화</th>
+          <th class="weekday">수</th>
+          <th class="weekday">목</th>
+          <th class="weekday">금</th>
+          <th class="weekday">토</th>
+        </tr>
+        <!-- Add rows dynamically using JavaScript -->
+      </table>
+      <footer>
+        <address>CopyRight &copy; marpol@marpol.com</address>
+      </footer>
+    </div>
+
+    <script>
+      function showSchedule(input) {
+        var schedule = prompt("일정을 입력하세요:");
+        input.value = schedule;
+      }
+
+      function generateCalendar() {
+        var year = parseInt(document.getElementById("year").value);
+        var month = parseInt(document.getElementById("month").value);
+
+        var firstDay = new Date(year, month, 1);
+        var lastDay = new Date(year, month + 1, 0);
+        var daysInMonth = lastDay.getDate();
+        var startDay = firstDay.getDay();
+        var currentDay = 1;
+
+        var table = document.getElementById("calendarTable");
+        table.innerHTML = "";
+
+        var row = document.createElement("tr");
+        table.appendChild(row);
+
+        var daysOfWeek = ["일", "월", "화", "수", "목", "금", "토"];
+
+        for (var dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
+          var th = document.createElement("th");
+          th.textContent = daysOfWeek[dayOfWeek];
+          row.appendChild(th);
+        }
+
+        var numRows = Math.ceil((daysInMonth + startDay) / 7);
+
+        for (var week = 0; week < numRows; week++) {
+          row = document.createElement("tr");
+          table.appendChild(row);
+
+          for (var dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
+            var td = document.createElement("td");
+            var input = document.createElement("input");
+            input.type = "text";
+            input.readOnly = true;
+            input.onclick = function () {
+              showSchedule(this);
+            };
+            td.appendChild(input);
+            input = row.appendChild(td);
+
+            if (week === 0 && dayOfWeek < startDay) {
+              input.disabled = true;
+            } else if (currentDay > daysInMonth) {
+              input.disabled = true;
+            } else {
+              input.value = currentDay;
+              td.classList.add("date");
+
+              if (
+                currentDay === new Date().getDate() &&
+                month === new Date().getMonth() &&
+                year === new Date().getFullYear()
+              ) {
+                td.classList.add("today");
+              }
+
+              if (dayOfWeek === 0) {
+                td.classList.add("weekday");
+              }
+
+              currentDay++;
+            }
+          }
+        }
+      }
+
+      // 현재 날짜를 기준으로 달력 생성
+      var currentDate = new Date();
+      var currentYear = currentDate.getFullYear();
+      var currentMonth = currentDate.getMonth();
+      document.getElementById("year").value = currentYear;
+      document.getElementById("month").value = currentMonth;
+      generateCalendar();
+    </script>
+  </body>
+</html>
