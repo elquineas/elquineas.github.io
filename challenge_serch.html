@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공유하기</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        border: 3px solid black;
+      }
+      .search_box {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #2f3640;
+        height: 40px;
+        border-radius: 40px;
+        padding: 10px;
+        /* border: 2px solid yellow; */
+      }
+      .search_box:hover .search_txt {
+        width: 240px;
+        padding: 0 6px;
+      }
+      .search_box:hover .search_btn {
+        background-color: white;
+      }
+      .search_btn {
+        color: #997777;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        text-decoration: none;
+      }
+      .search_txt {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+      }
+
+      header {
+        align-items: center;
+        text-align: center;
+      }
+
+      section {
+        height: 87%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        border: 1px solid blue;
+        justify-content: center;
+      }
+
+      div.share_box {
+        border: 1px solid black;
+        margin: 5px;
+        padding: 0px;
+        width: 250px;
+        height: 20%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30%;
+        background-color: #997777;
+      }
+
+      footer {
+        background-color: rgb(224, 224, 224);
+        text-align: center;
+        padding: 0.7rem;
+        width: 80%;
+      }
+
+      div#one {
+        /* border: 3px solid blue; */
+        /* text-align: left; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="dept">
+      <img src="image/mainimage.png" width="1000px" />
+      <p>갓생살기</p>
+    </header>
+    <form>
+      <div class="search_box">
+        <input
+          class="search_txt"
+          type="text"
+          name=""
+          placeholder="챌린지를 검색 해보세요"
+        />
+        <a class="search_btn" href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </form>
+    <section>
+      <div class="share_box" id="one">
+        <img src="image/pan.jpg" width="15%" />
+        김산
+        <p>고전문학 읽기도전중</p>
+        <input id="count" type="text" placeholder="오만과편견" />
+        <p>도전일자 7일</p>
+        <p>성공일자 3일</p>
+      </div>
+      <div class="share_box" id="two">이산</div>
+      <div class="share_box" id="three">박산</div>
+      <div class="share_box" id="four">강산</div>
+    </section>
+    <footer>
+      <address>CopyRight &copy; marpol@marpol.com</address>
+    </footer>
+  </body>
+</html>
