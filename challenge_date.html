@@ -7,13 +7,28 @@
     <title>챌린지 추가(기간)</title>
     <link rel="stylesheet" href="css/challenge_date.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header class="dept">   
-        <!-- <img src="image/mainimage.png" width="1000px" /> -->
-      <p>갓생살기</p>
-    </header>
+    <div class="mainimage">
+      <img src="image/1.gif" width="50px" height="50px" />
+      <img src="image/2.gif" width="50px" height="70px" />
+      <img src="image/3.gif" width="50px" height="90px" />
+      <img src="image/4.gif" width="50px" height="110px" />
+      <img src="image/5.gif" width="50px" height="130px" />
+      <div id="title" class="title font-effect-fire">갓생살기</div>
+    </div>
+    <!-- <div id="title" class="title font-effect-fire">갓생살기</div> -->
     <div>
       <!-- <div class="cplus"> 챌린지 추가하기</div> -->
       <div>챌린지 추가하기</div>
@@ -29,7 +44,7 @@
       <article class="dept">
         <div id="divt">
           <label for="star">
-            <img src="image/star.jpg" width="10%" />
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>
           </label>
           <input
             id="star"
@@ -39,20 +54,20 @@
         </div>
         <div>
           <label for="count">
-            <img src="image/pan.jpg" width="10%" />
+            <i class="fa fa-calendar" aria-hidden="true"></i>
           </label>
           <input id="count" type="date" placeholder="날짜" />
           <label for=""></label>
         </div>
         <div>
           <label for="al">
-            <img src="image/clo.jpg" width="15%" />
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
           </label>
           <input id="al" type="time" placeholder="알람" />
         </div>
         <div>
           <label for="memo">
-            <img src="image/memo.jpg" width="10%" />
+            <i class="fa fa-book" aria-hidden="true"></i>
           </label>
           <input id="memo" type="text" placeholder="메모" />
         </div>
@@ -64,8 +79,8 @@
         </div>
       </article>
     </section>
-    <footer>
+    <!-- <footer>
       <address>CopyRight &copy; marpol@marpol.com</address>
-    </footer>
+    </footer> -->
   </body>
 </html>
