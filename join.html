@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>갓생살기 - 회원가입</title>
     <link rel="stylesheet" href="css/join.css" />
+    <link rel="stylesheet" href="css/member.css" />
     <script src="js/join.js"></script>
-    <script
-      src="https://kit.fontawesome.com/3aaa5e7779.js"
-      crossorigin="anonymous"
-    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -48,28 +45,35 @@
         </div>
         <div class="contain_box">
           <span class="icon-box">
-            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+            <label for="re_password">
+              <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+            </label>
           </span>
           <input
             class="login_input"
+            id="re_password"
             type="password"
             placeholder="비밀번호 확인"
           />
         </div>
         <div class="contain_box">
           <span class="icon-box">
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            <label for="birth">
+              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            </label>
           </span>
-          <input class="login_input" placeholder="생년월일" />
+          <input class="login_input" id="birth" placeholder="생년월일" />
         </div>
         <div class="contain_box">
           <span class="icon-box">
-            <i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
+            <label for="tel">
+              <i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
+            </label>
           </span>
-          <input class="login_input" placeholder="전화번호" />
+          <input class="login_input" id="tel" placeholder="전화번호" />
         </div>
         <div class="contain_box">
-          <button class="login_button" id="kakao_login">회원가입</button>
+          <button class="login_button" id="login_btn">가입하기</button>
         </div>
       </div>
     </div>

@@ -16,8 +16,9 @@ html {
 }
 
 header {
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
+  font-family: Sofia, cursive;
 }
 
 /* nav {
@@ -66,7 +67,7 @@ article {
 }
 
 footer {
-  background-color: rgb(224, 224, 224);
+  /* background-color: rgb(224, 224, 224); */
   text-align: center;
   padding: 0.7rem;
 }

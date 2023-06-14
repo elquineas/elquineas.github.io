@@ -21,4 +21,6 @@ const eamilKeyUp = function () {
   } else {
     g_email.style.border = "1px solid mediumseagreen";
   }
+
+  document.querySelector("#login_btn").addEventListener("click", join);
 };

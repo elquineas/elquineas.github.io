@@ -1,72 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-}
-.phone_size {
-  /* border: 1px solid black; */
-  height: 600px;
-  width: 1000px;
-  margin: 100px auto 0;
-}
-
 .title {
-  text-align: center;
-  width: 100%;
-  height: 150px;
-  padding-top: 100px;
+  /* height: 200px; */
 }
 .title div {
   border: 1px solid #b2b2b2;
+  background-color: #ecf2ff;
   padding: 10px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   border-radius: 5px;
   width: 280px;
   height: 40px;
   font-size: 15px;
-}
-
-.contain {
-  /* border: 1px solid red; */
-  height: 380px;
-}
-.contain_box {
-  position: relative;
-  /* border: 1px solid blue; */
-  width: 100%;
-  height: 50px;
-  margin-top: 10px;
-  color: black;
-}
-.login_input {
-  border: 1px solid #b2b2b2;
-  border-radius: 5px;
-  width: 280px;
-  height: 40px;
-  font-size: 15px;
-}
-.login_button {
-  border: 0px solid black;
-  border-radius: 5px;
-  background-color: #f5f0bb;
-  width: 290px;
-  height: 40px;
-  font-size: 15px;
-  font-weight: 700px;
-}
-
-.login_button:hover {
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  line-height: normal;
+  font-weight: 700;
 }
 
 .icon-box {
