@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>챌린지 추가(횟수)</title>
-    <link rel="stylesheet" href="./css/challenge_count.css" />
+    <title>일정추가하기</title>
+    <link rel="stylesheet" href="./css/date_input.css" />
     <script src="js/join.js"></script>
     <link
       rel="stylesheet"
@@ -28,14 +28,7 @@
           <img src="image/5.gif" width="50px" height="130px" /> -->
       <div id="godlife" class="title font-effect-fire">갓생살기</div>
       <div class="title">
-        <div>챌린지 추가하기</div>
-      </div>
-      <div class="button_select">
-        <label for=""></label>
-        <nav>
-          <a href="challenge_date.html">기간</a>
-          <a href="challenge_count.html">횟수</a>
-        </nav>
+        <div>일정 추가하기</div>
       </div>
       <div class="contain">
         <div class="contain_box">
@@ -44,23 +37,19 @@
               <i class="fa fa-star-half-o" aria-hidden="true"></i>
             </label>
           </span>
-          <input
-            class="challenge_input"
-            id="challenge"
-            placeholder="챌린지를 적어주세요"
-          />
+          <input class="challenge_input" id="challenge" placeholder="일정" />
         </div>
         <div class="contain_box">
           <span class="icon-box">
-            <label for="count">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
+            <label for="date">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
             </label>
           </span>
           <input
             class="challenge_input"
-            id="count"
-            type="number"
-            placeholder="횟수"
+            id="date"
+            type="date"
+            placeholder="날짜"
           />
         </div>
         <div class="contain_box">

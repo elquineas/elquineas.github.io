@@ -5,12 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>챌린지 추가(기간)</title>
-    <link rel="stylesheet" href="css/challenge_date.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
-    />
+    <link rel="stylesheet" href="./css/challenge_date.css" />
+    <script src="js/join.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -18,69 +14,80 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+    />
   </head>
   <body>
-    <div class="mainimage">
+    <div class="phone_size">
       <!-- <img src="image/1.gif" width="50px" height="50px" />
-      <img src="image/2.gif" width="50px" height="70px" />
-      <img src="image/3.gif" width="50px" height="90px" />
-      <img src="image/4.gif" width="50px" height="110px" />
-      <img src="image/5.gif" width="50px" height="130px" /> -->
-      <div id="title" class="title font-effect-fire">갓생살기</div>
-    </div>
-    <!-- <div id="title" class="title font-effect-fire">갓생살기</div> -->
-    <div>
-      <!-- <div class="cplus"> 챌린지 추가하기</div> -->
-      <div>챌린지 추가하기</div>
+          <img src="image/2.gif" width="50px" height="70px" />
+          <img src="image/3.gif" width="50px" height="90px" />
+          <img src="image/4.gif" width="50px" height="110px" />
+          <img src="image/5.gif" width="50px" height="130px" /> -->
+      <div id="godlife" class="title font-effect-fire">갓생살기</div>
+      <div class="title">
+        <div>챌린지 추가하기</div>
+      </div>
       <div class="button_select">
         <label for=""></label>
         <nav>
           <a href="challenge_date.html">기간</a>
           <a href="challenge_count.html">횟수</a>
-          </nav>
+        </nav>
       </div>
-    <section class="dept">
-      <div>
-      <article class="dept">
-        <div id="divt">
-          <label for="star">
-            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-          </label>
+      <div class="contain">
+        <div class="contain_box">
+          <span class="icon-box">
+            <label for="challenge">
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </label>
+          </span>
           <input
-            id="star"
-            type="text"
+            class="challenge_input"
+            id="challenge"
             placeholder="챌린지를 적어주세요"
           />
         </div>
-        <div>
-          <label for="count">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-          </label>
-          <input id="count" type="date" placeholder="날짜" />
-          <label for=""></label>
+        <div class="contain_box">
+          <span class="icon-box">
+            <label for="date">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+            </label>
+          </span>
+          <input
+            class="challenge_input"
+            id="date"
+            type="date"
+            placeholder="날짜"
+          />
         </div>
-        <div>
-          <label for="al">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-          </label>
-          <input id="al" type="time" placeholder="알람" />
+        <div class="contain_box">
+          <span class="icon-box">
+            <label for="al">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+            </label>
+          </span>
+          <input
+            class="challenge_input"
+            id="al"
+            type="time"
+            placeholder="알람"
+          />
         </div>
-        <div>
-          <label for="memo">
-            <i class="fa fa-book" aria-hidden="true"></i>
-          </label>
-          <input id="memo" type="text" placeholder="메모" />
+        <div class="contain_box">
+          <span class="icon-box">
+            <label for="memo">
+              <i class="fa fa-book" aria-hidden="true"></i>
+            </label>
+          </span>
+          <input class="challenge_input" id="memo" placeholder="메모" />
         </div>
-        <div class="button_box">
-          <label for=""></label>
-          <div>
-            <button>저장</button>
-          </div>
+        <div class="contain_box">
+          <button class="save_button" id="save_btn">저장하기</button>
         </div>
-      </article>
-    </section>
-    <!-- <footer>
-      <address>CopyRight &copy; marpol@marpol.com</address>
-    </footer> -->
+      </div>
+    </div>
   </body>
 </html>
