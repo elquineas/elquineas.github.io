@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갓생살기 - 추천하기</title>
+  <link rel="stylesheet" href="rcommend.css">
+  <script src="recommend.js"></script>
+</head>
+<body>
+  <div contenteditable="true">편집가능</div>
+  <div class="phone_size">
+    <h3>챌리지에 도전하세요!</h3>
+    <div class="challenge_box">
+      <div class="challenge_water" value="water" onclick="setChallenge()">물 1L마시기</div>
+      <div class="challenge_zoro" value="zoro" onclick="">무지출 챌린지</div>
+      <div class="challenge_book" value="book" onclick="">책읽기</div>
+      <div class="challenge_dairy" value="dairy" onclick="">일기쓰기</div>
+      <div class="challenge_bedding" value="bedding" onclick="">침구정리</div>
+      <div class="challenge_running" value="running" onclick="">런닝하기</div>
+    </div>
+    
+  <br>
+  <!-- <button type="button" class="challenge_add">추가하기</button> -->
+
+<div class="item" id="box_add">
+  <input class="item" placeholder="목표를 입력하세요"></input>
+  <button type="button" class="add" id="boxWrap">+</button>
+  </div>
+  <br>
+  <!-- <input class="item" placeholder="목표를 입력하세요"></input>
+  <button type="button"class="add">+</button>
+  <br>
+  <input class="item" placeholder="목표를 입력하세요"></input>
+  <button type="button"class="add">+</button> -->
+</div>
+  <button type="submit" class="box_save" >수정하기</button>
+  <button type="reset" class="box_reset" >저장하기</button>
+  <!-- <button id="menu">+</button> -->
+  <br>
+  <button class="skip">skip</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  var i = 1; // 변수설정은 함수의 바깥에 설정!
+  $("#boxWrap").click(function () {
+    $("#box_add").append("<div class=\"item\" id=\"box_add\">"+
+                        "<input class=\"item\" placeholder=\"목표를 입력하세요\"></input>"+
+                        "</div>");
+    i++; // 함수 내 하단에 증가문 설정
+  });
+});
+
+
+</script>
+</body>
+
+</html>
