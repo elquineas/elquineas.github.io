@@ -20,21 +20,22 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
-  color: #c4c3ca;
-  background-color: #1f2029;
+  /* color: #c4c3ca; */
   overflow-x: hidden;
   background-color: #fff7ee;
   text-align: center;
 }
 
 a {
-  cursor: pointer;
-  transition: all 200ms linear;
-  outline: none;
-}
-a:hover {
   text-decoration: none;
 }
+
+/* a.menu {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 5px #ccc;
+  font-size: 20px;
+  color: black;
+} */
 
 .link {
   color: #c4c3ca;
@@ -42,6 +43,7 @@ a:hover {
 .link:hover {
   color: #ffeba7;
 }
+
 p {
   font-weight: 500;
   font-size: 14px;
