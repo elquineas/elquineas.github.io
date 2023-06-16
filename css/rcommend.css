@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.phone_size {
+  height: 600px;
+  width: 1000px;
+  margin: 100px auto 0;
+}
+body {
+  text-align: center;
+  background-color: #fff7ee;
+}
+
+h3 {
+  font-size: 50px;
+}
+div.challenge_box {
+  border: none;
+  margin-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+input.item {
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+}
+input.item:hover {
+  width: 350px;
+  background-color: #fdefc2;
+}
+button.add {
+  background-color: #fff7ee;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  position: relative;
+  border: none;
+}
+button.add:hover {
+  background-color: #e4dffd;
+  font-size: 30px;
+  border-radius: 15px;
+}
+button.box_add,
+button.box_save,
+button.box_reset,
+button.skip {
+  width: 100px;
+  height: 50px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+button.box_add {
+  background-color: #e4dffd;
+  border: none;
+}
+button.box_save {
+  background-color: #ecf2ff;
+  border: none;
+}
+button.box_reset {
+  background-color: #fdefc2;
+  border: none;
+}
+button.skip {
+  background-color: #e4dffd;
+  border: none;
+}
+
+button#menu {
+  background-color: #fff7ee;
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
+  border-radius: 50%;
+  border-color: #575757;
+  color: #575757;
+  margin-bottom: 50px;
+  margin-left: 500px;
+}
+div.up,
+div.down {
+  border: 1px solid #575757;
+}
