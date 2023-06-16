@@ -20,7 +20,8 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
-  /* color: #c4c3ca; */
+  color: #c4c3ca;
+  background-color: #1f2029;
   overflow-x: hidden;
   background-color: #fff7ee;
   text-align: center;
@@ -52,14 +53,8 @@ p {
   padding: 50px;
 }
 
-/* 일정 챌린지 글자 조절 */
 h4 {
   font-weight: 600;
-  position: absolute;
-  top: -4%;
-  left: 123.5%;
-  width: 50px;
-  text-align: center;
 }
 h6 span {
   padding: 20px;
@@ -91,7 +86,7 @@ h6 span {
   display: block;
   text-align: center;
   /* 화살표 안에 기둥 */
-  width: 60px;
+  width: 50px;
   height: 16px;
   border-radius: 8px;
   padding: 0;
@@ -138,72 +133,17 @@ h6 span {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: -55px;
+  left: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: all 600ms ease-out;
-}
-
-.calendar {
-  /* width: 1000px; */
-  height: 500px;
-  padding: 7px;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  /* 중앙위치 */
-  margin: 0px auto;
-  justify-content: left;
-}
-
-/* section {
-    display: flex;
-    width: 100%;
-    height: 500px;
-    text-align: center;
-  
-    /* flex-item 의 가로 세로 정렬하기 */
-/* justify-content: center;
-    align-items: center;
-  } */
-
-/* 일자 스타일 */
-.calendar-day {
-  text-align: left;
-  padding: 5px;
-  background-color: #fff7ee;
-  border: 1px solid #e4dffd;
-  width: 100px;
-  height: 100px;
-}
-
-.calendar-day1 {
-  text-align: center;
-  padding: 5px;
-  background-color: #fff7ee;
-  border: 2px solid #e4dffd;
-  width: 100px;
-  height: 100px;
-}
-
-.calendar-day3 {
-  text-align: left;
-  padding: 5px;
-  background-color: #fff7ee;
-  border: 1px solid #e4dffd;
-  width: 100px;
-  color: #c4c3ca;
-  height: 100px;
-}
-
-.schedule {
-  text-align: center;
 }
 
 .card-front,
@@ -236,7 +176,7 @@ h6 span {
   width: 77%;
   padding: 0 35px;
   top: 50%;
-  left: -155px;
+  left: 0;
   transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
   display: block;

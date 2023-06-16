@@ -2,15 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>일정표</title>
-    <link rel="stylesheet" href="css/calendar.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
-    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/calendar.css" />
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -18,81 +13,200 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="js/calendar.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+    />
+    <script
+      src="https://kit.fontawesome.com/3aaa5e7779.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="phone_size">
-      <div id="godlife" class="title font-effect-fire">갓생살기</div>
-      <div class="title">
-        <div id="year">2023</div>
-      </div>
-      <div class="button_select">
-        <label for=""></label>
-        <nav>
-          <a href="calendar.html">일정</a>
-          <a href="challenge_calendar.html">챌린지</a>
-        </nav>
-      </div>
-    <div class="month">6월</div>
-    <div class="month">일정표</div>
-    <section>
-      <div class="calendar">
-        <div class="calendar-day1">일</div>
-        <div class="calendar-day1">월</div>
-        <div class="calendar-day1">화</div>
-        <div class="calendar-day1">수</div>
-        <div class="calendar-day1">목</div>
-        <div class="calendar-day1">금</div>
-        <div class="calendar-day1">토</div>
-        <div class="calendar-day"></div>
-        <div class="calendar-day"></div>
-        <div class="calendar-day">1</div>
-        <div class="calendar-day">2</div>
-        <div class="calendar-day">3</div>
-        <div class="calendar-day">
-          4
-          <div class="schedule"><input type="checkbox"></input> 회식</div>
-          <div class="smimage">
-            <img src="image/sm.png" width="20px" />
+    <nav class="side_bar">
+        <!-- 사이드바 시작 -->
+        <div class="side_top font-effect-fire">갓생살기</div>
+        <div class="side_menu">
+          <div class="inner_smenu">
+            <ul>
+              <li><a href="#">챌린지</a></li>
+              <li><a href="challenge_input.html">챌린지추가</a></li>
+              <li><a href="#">일정추가</a></li>
+              <li><a href="calendar.html">일정보기</a></li>
+              <li><a href="#">환경설정</a></li>
+            </ul>
           </div>
         </div>
-        <div class="calendar-day">5</div>
-        <div class="calendar-day">6</div>
-        <div class="calendar-day">7</div>
-        <div class="calendar-day">8</div>
-        <div class="calendar-day">9</div>
-        <div class="calendar-day">10</div>
-        <div class="calendar-day">11</div>
-        <div class="calendar-day">12</div>
-        <div class="calendar-day">13</div>
-        <div class="calendar-day">14</div>
-        <div class="calendar-day">
-          15
-          <div class="schedule"><input type="checkbox"></input> 백화점</div>
+  
+        <div class="sfooter">
+          <div class="sns_wrap">
+            <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
+            <a href="#" class="sns_btn" id="insta">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="sns_btn" id="facebook">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#" class="sns_btn" id="youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="sns_btn" id="line">
+              <i class="fab fa-line"></i>
+            </a>
+          </div>
         </div>
-        <div class="calendar-day">16</div>
-        <div class="calendar-day">17</div>
-        <div class="calendar-day">18</div>
-        <div class="calendar-day">19</div>
-        <div class="calendar-day">20</div>
-        <div class="calendar-day">21</div>
-        <div class="calendar-day">22</div>
-        <div class="calendar-day">23</div>
-        <div class="calendar-day">24</div>
-        <div class="calendar-day">
-          25
-          <div class="schedule"><input type="checkbox"></input> 월급</div>
+      </nav>
+    <div class="section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <div id="godlife" class="title font-effect-fire">갓생살기</div>
+                <h6 class="mb-0 pb-3"><span>일정 </span><span>챌린지</span></h6>
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="reg-log"
+                  name="reg-log"
+                />
+                <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">일정</h4>
+                        <div class="form-group">
+                          <!-- <section> -->
+                            <div class="calendar">
+                                <div class="calendar-day1">일</div>  
+                              <div class="calendar-day1">월</div>
+                              <div class="calendar-day1">화</div>
+                              <div class="calendar-day1">수</div>
+                              <div class="calendar-day1">목</div>
+                              <div class="calendar-day1">금</div>
+                              <div class="calendar-day1">토</div>
+                              <div class="calendar-day3">28</div>
+                              <div class="calendar-day3">29</div>
+                              <div class="calendar-day3">30</div>
+                              <div class="calendar-day3">31</div>
+                              <div class="calendar-day">1</div>
+                              <div class="calendar-day">2</div>
+                              <div class="calendar-day">3</div>
+                              <div class="calendar-day">
+                                4
+                                <div class="schedule"><input type="checkbox"></input> 회식</div>
+                              </div>
+                              <div class="calendar-day">5</div>
+                              <div class="calendar-day">6</div>
+                              <div class="calendar-day">7</div>
+                              <div class="calendar-day">8</div>
+                              <div class="calendar-day">9</div>
+                              <div class="calendar-day">10</div>
+                              <div class="calendar-day">11</div>
+                              <div class="calendar-day">12</div>
+                              <div class="calendar-day">13</div>
+                              <div class="calendar-day">14</div>
+                              <div class="calendar-day">
+                                15
+                                <div class="schedule"><input type="checkbox"></input> 백화점</div>
+                              </div>
+                              <div class="calendar-day">16</div>
+                              <div class="calendar-day">17</div>
+                              <div class="calendar-day">18</div>
+                              <div class="calendar-day">19</div>
+                              <div class="calendar-day">20</div>
+                              <div class="calendar-day">21</div>
+                              <div class="calendar-day">22</div>
+                              <div class="calendar-day">23</div>
+                              <div class="calendar-day">24</div>
+                              <div class="calendar-day">
+                                25
+                                <div class="schedule"><input type="checkbox"></input> 월급</div>
+                              </div>
+                              <div class="calendar-day">26</div>
+                              <div class="calendar-day">27</div>
+                              <div class="calendar-day">28</div>
+                              <div class="calendar-day">29</div>
+                              <div class="calendar-day">30</div>
+                              <div class="calendar-day3">1</div>
+                    
+
+                            </div>
+                            </div>
+                          <!-- </section> -->
+                        <p class="mb-0 mt-4 text-center"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">챌린지</h4>
+                        <div class="form-group">
+                            <!-- <section> -->
+                                <div class="calendar">
+                                  <div class="calendar-day1">일</div>
+                                  <div class="calendar-day1">월</div>
+                                  <div class="calendar-day1">화</div>
+                                  <div class="calendar-day1">수</div>
+                                  <div class="calendar-day1">목</div>
+                                  <div class="calendar-day1">금</div>
+                                  <div class="calendar-day1">토</div>
+                                  <div class="calendar-day3">28</div>
+                                  <div class="calendar-day3">29</div>
+                                  <div class="calendar-day3">30</div>
+                                  <div class="calendar-day3">31</div>
+                                  <div class="calendar-day">1</div>
+                                  <div class="calendar-day">2</div>
+                                  <div class="calendar-day">3</div>
+                                  <div class="calendar-day">4</div>
+                                  <div class="calendar-day">5</div>
+                                  <div class="calendar-day">6</div>
+                                  <div class="calendar-day">7</div>
+                                  <div class="calendar-day">8</div>
+                                  <div class="calendar-day">9</div>
+                                  <div class="calendar-day">10</div>
+                                  <div class="calendar-day">11</div>
+                                  <div class="calendar-day">12</div>
+                                  <div class="calendar-day">13</div>
+                                  <div class="calendar-day">14</div>
+                                  <div class="calendar-day">
+                                    15
+                                    <div class="schedule"><input type="range" />독서</div>
+                                  </div>
+                                  <div class="calendar-day">
+                                    16
+                                    <div class="schedule"><input type="range" />런닝하기</div>
+                                  </div>
+                                  <div class="calendar-day">17</div>
+                                  <div class="calendar-day">18</div>
+                                  <div class="calendar-day">19</div>
+                                  <div class="calendar-day">20</div>
+                                  <div class="calendar-day">21</div>
+                                  <div class="calendar-day">22</div>
+                                  <div class="calendar-day">23</div>
+                                  <div class="calendar-day">24</div>
+                                  <div class="calendar-day">25</div>
+                                  <div class="calendar-day">26</div>
+                                  <div class="calendar-day">27</div>
+                                  <div class="calendar-day">28</div>
+                                  <div class="calendar-day">29</div>
+                                  <div class="calendar-day">30</div>
+                                  <div class="calendar-day3">1</div>
+                                </div>
+                              <!-- </section> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="calendar-day">26</div>
-        <div class="calendar-day">27</div>
-        <div class="calendar-day">28</div>
-        <div class="calendar-day">29</div>
-        <div class="calendar-day">30</div>
       </div>
-      </div>
-    </section>
-    <!-- <footer>
-      <address>CopyRight &copy; marpol@marpol.com</address>
-    </footer> -->
+    </div>
   </body>
 </html>
+
+
