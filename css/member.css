@@ -20,6 +20,7 @@ a {
 }
 
 .phone_size {
+  position: relative;
   /* border: 1px solid black; */
   height: 600px;
   width: 1000px;
@@ -31,6 +32,7 @@ a {
   line-height: 250px;
   /* height: 250px; */
   font-size: 60px;
+  margin-bottom: 20px;
 }
 .contain {
   /* border: 1px solid red; */
@@ -41,7 +43,7 @@ a {
   /* border: 1px solid blue; */
   width: 100%;
   height: 50px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .login_input {
   border: 1px solid #b2b2b2;
@@ -70,3 +72,25 @@ a {
   box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
+.msg_box {
+  /* border: 1px solid blue; */
+  display: none;
+  height: 40px;
+  padding: 7px;
+}
+.msg_div {
+  /* border: 1px solid orange; */
+  width: 290px;
+  height: 22px;
+  margin-left: 360px;
+  text-align: left;
+  font-size: 14px;
+  display: none;
+}
+/* 
+.msg_box {
+  border: 1px solid blue;
+  height: 40px;
+  padding: 7px;
+} */
