@@ -24,6 +24,12 @@ body {
   text-align: center;
 }
 
+.glogo {
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -401,4 +407,16 @@ button {
   height: 26px;
   width: auto;
   display: block;
+}
+
+/* a:active,
+a:focus {
+  background-color: blue;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+} */
+
+.test {
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }
