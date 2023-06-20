@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test2</title>
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+    />
+    <script
+      src="https://kit.fontawesome.com/3aaa5e7779.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       body,
       html {
@@ -67,12 +83,55 @@
         text-align: center;
         padding: 0.7rem;
       }
+
+      #godlife {
+        font-size: 50px;
+        padding: 50px;
+      }
+      a {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
+    <nav class="side_bar">
+      <!-- 사이드바 시작 -->
+      <a href="challenge_input.html" class="mainlogo">
+        <img src="./image/ddd.png" width="50px" />
+        <img src="./image/www.png" width="250px" />
+        <img src="./image/ddd.png" width="50px" />
+      </a>
+      <div class="side_menu">
+        <div class="inner_smenu">
+          <ul>
+            <li><a href="#">챌린지</a></li>
+            <li><a href="challenge_input.html">챌린지추가</a></li>
+            <li><a href="date_input.html">일정추가</a></li>
+            <li><a class="test" href="calendar.html">일정보기</a></li>
+            <li><a href="#">환경설정</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sfooter">
+        <div class="sns_wrap">
+          <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
+          <a href="#" class="sns_btn" id="insta">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="sns_btn" id="facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#" class="sns_btn" id="youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="sns_btn" id="line">
+            <i class="fab fa-line"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
     <header class="dept">
-      <img src="mainimage.png" width="1000px" />
-      <p>갓생살기</p>
+      <div id="godlife" class="title font-effect-fire">갓생살기</div>
     </header>
     <div class="calendar">
       <select id="year" onchange="generateCalendar()">
@@ -106,9 +165,9 @@
         </tr>
         <!-- Add rows dynamically using JavaScript -->
       </table>
-      <footer>
+      <!-- <footer>
         <address>CopyRight &copy; marpol@marpol.com</address>
-      </footer>
+      </footer> -->
     </div>
 
     <script>
