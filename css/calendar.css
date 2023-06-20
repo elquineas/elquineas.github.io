@@ -1,5 +1,3 @@
-/* Please ❤ this if you like it! */
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
 * {
@@ -26,12 +24,13 @@ body {
   text-align: center;
 }
 
-a {
-  cursor: pointer;
-  transition: all 200ms linear;
-  outline: none;
+.glogo {
+  align-items: center;
+  justify-self: center;
+  text-align: center;
 }
-a:hover {
+
+a {
   text-decoration: none;
 }
 
@@ -408,4 +407,16 @@ button {
   height: 26px;
   width: auto;
   display: block;
+}
+
+/* a:active,
+a:focus {
+  background-color: blue;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+} */
+
+.test {
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }

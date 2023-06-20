@@ -2,11 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>일정추가하기</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/date_input.css" />
-    <script src="js/join.js"></script>
+    <link rel="stylesheet" href="./css/sidebar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -18,63 +17,174 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
     />
+    <script
+      src="https://kit.fontawesome.com/3aaa5e7779.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="phone_size">
-      <!-- <img src="image/1.gif" width="50px" height="50px" />
-          <img src="image/2.gif" width="50px" height="70px" />
-          <img src="image/3.gif" width="50px" height="90px" />
-          <img src="image/4.gif" width="50px" height="110px" />
-          <img src="image/5.gif" width="50px" height="130px" /> -->
-      <div id="godlife" class="title font-effect-fire">갓생살기</div>
-      <div class="title">
-        <div>일정 추가하기</div>
+    <nav class="side_bar">
+      <!-- 사이드바 시작 -->
+      <a href="challenge_input.html" class="mainlogo">
+        <img src="./image/www.png" width="250px" />
+        <img src="./image/ggg.png" width="50px" />
+      </a>
+      <div class="side_menu">
+        <div class="inner_smenu">
+          <ul>
+            <li><a class="=menu" href="#">챌린지</a></li>
+            <li><a href="challenge_input.html">챌린지추가</a></li>
+            <li><a class="test" href="date_input.html">일정추가</a></li>
+            <li><a href="calendar.html">일정보기</a></li>
+            <li><a href="#">환경설정</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="contain">
-        <div class="contain_box">
-          <span class="icon-box">
-            <label for="challenge">
-              <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            </label>
-          </span>
-          <input class="challenge_input" id="challenge" placeholder="일정" />
+
+      <div class="sfooter">
+        <div class="sns_wrap">
+          <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
+          <a href="#" class="sns_btn" id="insta">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="sns_btn" id="facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#" class="sns_btn" id="youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="sns_btn" id="line">
+            <i class="fab fa-line"></i>
+          </a>
         </div>
-        <div class="contain_box">
-          <span class="icon-box">
-            <label for="date">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-            </label>
-          </span>
-          <input
-            class="challenge_input"
-            id="date"
-            type="date"
-            placeholder="날짜"
-          />
-        </div>
-        <div class="contain_box">
-          <span class="icon-box">
-            <label for="al">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-            </label>
-          </span>
-          <input
-            class="challenge_input"
-            id="al"
-            type="time"
-            placeholder="알람"
-          />
-        </div>
-        <div class="contain_box">
-          <span class="icon-box">
-            <label for="memo">
-              <i class="fa fa-book" aria-hidden="true"></i>
-            </label>
-          </span>
-          <input class="challenge_input" id="memo" placeholder="메모" />
-        </div>
-        <div class="contain_box">
-          <button class="save_button" id="save_btn">저장하기</button>
+      </div>
+    </nav>
+    <div class="section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <div id="godlife" class="title font-effect-fire">갓생살기</div>
+              <h6 class="mb-0 pb-3"><span>텍스트</span><span>머머</span></h6>
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="reg-log"
+                name="reg-log"
+              />
+              <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">텍스트</h4>
+                        <div class="form-group">
+                          <!-- <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                          <input
+                            type="text"
+                            name="scd"
+                            class="form-style"
+                            placeholder="일정"
+                            id="scd"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-group mt-2">
+                          <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
+                          <input
+                            type="date"
+                            name="monthday"
+                            class="form-style"
+                            placeholder="연도"
+                            id="monthday"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-group mt-3">
+                          <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+                          <input
+                            type="time"
+                            name="al"
+                            class="form-style"
+                            placeholder="알람"
+                            id="al"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-group mt-4">
+                          <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+                          <input
+                            type="text"
+                            name="memo"
+                            class="form-style"
+                            placeholder="메모"
+                            id="memo"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <button class="btn">저장하기</button>
+                        <p class="mb-0 mt-4 text-center"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">횟수</h4>
+                        <div class="form-group">
+                          <!-- <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                          <input
+                            type="text"
+                            name="logname"
+                            class="form-style"
+                            placeholder="챌린지를 입력하세요"
+                            id="logname"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-group mt-2">
+                          <!-- <i class="fa fa-pencil" aria-hidden="true"></i> -->
+                          <input
+                            type="number"
+                            name="logemail"
+                            class="form-style"
+                            placeholder="횟수"
+                            id="logemail"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-group mt-2">
+                          <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+                          <input
+                            type="time"
+                            name="logpass"
+                            class="form-style"
+                            placeholder="알람"
+                            id="logpass"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <div class="form-group mt-2">
+                          <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+                          <input
+                            type="text"
+                            name="logpass"
+                            class="form-style"
+                            placeholder="메모"
+                            id="logpass"
+                            autocomplete="off"
+                          />
+                        </div>
+                        <button class="btn">저장하기</button>
+                        <!-- <a href="#" class="btn mt-4">저장하기</a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
