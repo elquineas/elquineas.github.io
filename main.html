@@ -2,22 +2,52 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        text-align: center;
-      }
-      .phone_size {
-        border: 1px solid black;
-        height: 600px;
-        width: 360px;
-        margin: 100px auto 0;
-      }
-    </style>
+    <title>schedule</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="phone_size"></div>
+    <table>
+      <tr class="day">
+        <td class="sunday">일</td>
+        <td class="day">월</td>
+        <td class="day">화</td>
+        <td class="day">수</td>
+        <td class="day">목</td>
+        <td class="day">금</td>
+        <td class="saturday">토</td>
+      </tr>
+      <tr class="num">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+    </table>
+    <div class="progress">
+      <div class="challenge">
+        <progress value="1" max="30"></progress>
+        <div class="challenge_box"></div>
+
+        <span class="bedding">침구정리</span>
+        <span class="count_badding">1/30</span>
+        <button class="add">+</button>
+      </div>
+      <div class="challenge">
+        <progress value="17" max="30"></progress>
+        <span class="dairy">일기쓰기</span>
+        <span class="count_dairy">17/30</span>
+        <button class="add">+</button>
+      </div>
+      <div class="challenge">
+        <progress value="3" max="7"></progress>
+        <span class="running">런닝하기</span>
+        <span class="count_running">4/7</span>
+        <button class="add">+</button>
+      </div>
+    </div>
   </body>
 </html>
