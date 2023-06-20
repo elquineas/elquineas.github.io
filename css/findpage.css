@@ -38,7 +38,7 @@
   font-size: 25px;
 }
 
-#check_num {
+.check_btn {
   position: absolute;
   /* border: 1px solid #b2b2b2; */
   background-color: #f5f0bb;
@@ -51,7 +51,7 @@
   font-weight: 700;
 }
 
-#check_num:hover {
+.check_btn:hover {
   box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
