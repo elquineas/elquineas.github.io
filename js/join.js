@@ -8,8 +8,6 @@ const INPUT_INDEX = {
 
 document.addEventListener("DOMContentLoaded", () => {
   const msg_divs = document.querySelectorAll("div.msg_div");
-
-  msg_divs[0].append("<button>TEST</button>");
   const join = () => {
     const join_inputs = document.querySelectorAll(".contain input");
     const input_email = join_inputs[INPUT_INDEX.EMAIL].value;
