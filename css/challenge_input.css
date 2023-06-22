@@ -62,6 +62,7 @@ h6 span {
   padding: 20px;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 15px;
 }
 .section {
   position: relative;
@@ -181,7 +182,7 @@ h6 span {
   width: 77%;
   padding: 0 35px;
   top: 50%;
-  left: 0;
+  left: 5px;
   transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
   display: block;
