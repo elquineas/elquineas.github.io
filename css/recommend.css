@@ -1,7 +1,13 @@
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(doc/font.ttf);
+  font-weight: bold;
+}
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: Nanum Seongsirce;
 }
 .phone_size {
   height: 600px;

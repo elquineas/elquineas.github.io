@@ -1,7 +1,13 @@
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(doc/font.ttf);
+  font-weight: bold;
+}
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: Nanum Seongsirce;
 }
 .phone_size {
   height: 600px;
@@ -204,21 +210,23 @@ body {
 
 h2 {
   font-size: 4em;
-  font-weight: 300;
+  font-weight: 20px;
   text-align: center;
   display: block;
   line-height: 1em;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   padding-bottom: 1em;
   padding-top: 50px;
   color: #575757;
+  background-color: #fff7ee;
   /* position: fixed; */
 }
-
 .container th h1 {
+  margin-left: 10px;
   font-weight: bold;
   font-size: 1em;
   text-align: center;
+  width: 40px;
   color: #575757;
 }
 
@@ -310,6 +318,7 @@ div.challenge {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 progress {
@@ -318,12 +327,12 @@ progress {
 
 ::-webkit-progress-bar {
   margin: 0 auto;
-  width: 600px;
+  width: 500px;
   height: 50px;
   background-color: white;
   border-radius: 10px;
   position: relative;
-  transform: translate(-100px);
+  transform: translate(-150px);
 }
 
 ::-webkit-progress-value {
@@ -340,84 +349,54 @@ progress.book {
   margin-right: 50px;
 }
 span.water {
+  font-size: 20px;
   position: absolute;
-  transform: translate(-250px, 15px);
+  transform: translate(-330px, 15px);
 }
 span.zero {
+  font-size: 20px;
   position: absolute;
-  transform: translate(-250px, 15px);
+  transform: translate(-330px, 15px);
 }
 span.book {
+  font-size: 20px;
   position: absolute;
-  transform: translate(-250px, 15px);
+  transform: translate(-330px, 15px);
 }
 span.count {
+  font-size: 20px;
   position: absolute;
-  transform: translate(230px, 15px);
+  transform: translate(80px, 15px);
 }
-/* button.add{
-    position: absolute;
-    transform: translate(310px, 10px);
-    font-size: 20px;
-    border-radius: 20px;
-    background-color: #fff7ee;
-    border: none;
-  }
-  button.add:hover{
-    background-color: #f8f1ff;
-    font-size: 30px;
-  }
-  button.pos{
-    position: absolute;
-    transform: translate(450px ,-60px);
-    font-size: 30px;
-    background-color: #fff7ee;
-    border: none;
-  }
-  button.pos:hover{
-    font-size: 40px;
-  } */
-/* 
-  button.move{
-    position: absolute;
-    transform: translate( 300px,70px);
-    border:  none;
-   
-  } */
+button.add {
+  position: absolute;
+  transform: translate(150px, 10px);
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: #fff7ee;
+  border: none;
+}
+button.add:hover {
+  background-color: #f8f1ff;
+}
+button.pos {
+  position: absolute;
+  transform: translate(450px, -60px);
+  font-size: 30px;
+  background-color: #fff7ee;
+  border: none;
+}
+button.pos:hover {
+  font-size: 40px;
+}
+
 /* 공유하기  키*/
 
-div.container {
-  position: relative;
-  transform: translate(400px, 50px);
-}
-.btnSlide .top {
+span.icon {
+  /* display: inline-block;
+  margin-left: 180px; */
   position: absolute;
-  top: 0px;
-  left: 0;
-  width: 120px;
-  height: 50px;
-  z-index: 10;
-  transition: all 0.2s;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.btnSlide.btnBlueGreen .top {
-  background: #fff7ee;
-}
-
-.btnSlide .bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 50px;
-  color: #000;
-  z-index: 5;
-  border-radius: 5px;
-}
-
-.btnSlide:hover .top {
-  top: 40px;
+  top: 35px;
+  right: 200px;
 }
 /* 메인 css */
