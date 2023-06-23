@@ -1,3 +1,25 @@
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(doc/font.ttf);
+  font-weight: bold;
+}
+* {
+  font-family: Nanum Seongsirce;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #fff7ee;
+}
+
 .side_bar {
   position: fixed;
   left: 0;

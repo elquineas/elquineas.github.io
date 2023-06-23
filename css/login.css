@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Nanum Seongsirce;
-  src: url(doc/font.ttf);
-  font-weight: bold;
-}
 .title {
   /* border: 1px solid black; */
   line-height: 250px;
