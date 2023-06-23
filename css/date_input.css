@@ -2,6 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(doc/font.ttf);
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -51,18 +57,23 @@ p {
 }
 
 #godlife {
-  font-size: 50px;
+  font-size: 70px;
   padding: 50px;
+  font-family: Nanum Seongsirce;
 }
 
 h4 {
   font-weight: 600;
+  font-size: 20px;
+  font-family: Nanum Seongsirce;
 }
 h6 span {
   padding: 20px;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 15px;
+  font-size: 20px;
+  font-family: Nanum Seongsirce;
 }
 .section {
   position: relative;
@@ -178,7 +189,7 @@ h6 span {
   /* width: 100%; */
   width: 77%;
   padding: 0 35px;
-  top: 62.5%;
+  top: 52.5%;
   left: 5px;
   transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
@@ -204,13 +215,16 @@ h6 span {
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: #c4c3ca;
+  color: black;
+  /* color: #c4c3ca; */
   background-color: white;
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
   margin: 7px;
+  font-size: 20px;
+  font-family: Nanum Seongsirce;
 }
 .form-style:focus,
 .form-style:active {
@@ -319,6 +333,8 @@ h6 span {
   background-color: #f5f0bb;
   color: #102770;
   box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+  font-size: 20px;
+  font-family: Nanum Seongsirce;
 }
 
 button {

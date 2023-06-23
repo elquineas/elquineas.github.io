@@ -6,13 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/challenge_input.css" />
     <link rel="stylesheet" href="./css/sidebar.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- <link rel="stylesheet" href="./js/challenge_input.js" /> -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
@@ -74,57 +68,60 @@
                 name="reg-log"
               />
               <label for="reg-log"></label>
+
               <div class="card-3d-wrap mx-auto">
                 <div class="card-3d-wrapper">
                   <div class="card-front">
                     <div class="center-wrap">
                       <div class="section text-center">
                         <h4 class="mb-4 pb-3">기간</h4>
-                        <div class="form-group">
-                          <!-- <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
-                          <input
-                            type="email"
-                            name="logemail"
-                            class="form-style"
-                            placeholder="챌린지를 입력하세요"
-                            id="logemail"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <div class="form-group mt-2">
-                          <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
-                          <input
-                            type="date"
-                            name="logpass"
-                            class="form-style"
-                            placeholder="연도"
-                            id="logpass"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <div class="form-group mt-3">
-                          <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
-                          <input
-                            type="time"
-                            name="al"
-                            class="form-style"
-                            placeholder="알람"
-                            id="al"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <div class="form-group mt-4">
-                          <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
-                          <input
-                            type="text"
-                            name="memo"
-                            class="form-style"
-                            placeholder="메모"
-                            id="memo"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <button class="btn">저장하기</button>
+                        <form>
+                          <div class="form-group">
+                            <!-- <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                            <input
+                              type="text"
+                              name="logemail"
+                              class="form-style"
+                              placeholder="챌린지를 입력하세요"
+                              id="logemail"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="form-group mt-2">
+                            <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
+                            <input
+                              type="date"
+                              name="logpass"
+                              class="form-style"
+                              placeholder="연도"
+                              id="logpass"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="form-group mt-3">
+                            <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+                            <input
+                              type="time"
+                              name="al"
+                              class="form-style"
+                              placeholder="알람"
+                              id="al"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="form-group mt-4">
+                            <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+                            <input
+                              type="text"
+                              name="memo"
+                              class="form-style"
+                              placeholder="메모"
+                              id="memo"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <button class="btn" id="savebtn">저장하기</button>
+                        </form>
                         <!-- <a href="#" class="btn mt-4">저장하기</a> -->
                         <p class="mb-0 mt-4 text-center"></p>
                       </div>
@@ -134,51 +131,53 @@
                     <div class="center-wrap">
                       <div class="section text-center">
                         <h4 class="mb-4 pb-3">횟수</h4>
-                        <div class="form-group">
-                          <!-- <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
-                          <input
-                            type="text"
-                            name="logname"
-                            class="form-style"
-                            placeholder="챌린지를 입력하세요"
-                            id="logname"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <div class="form-group mt-2">
-                          <!-- <i class="fa fa-pencil" aria-hidden="true"></i> -->
-                          <input
-                            type="number"
-                            name="logemail"
-                            class="form-style"
-                            placeholder="횟수"
-                            id="logemail"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <div class="form-group mt-2">
-                          <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
-                          <input
-                            type="time"
-                            name="logpass"
-                            class="form-style"
-                            placeholder="알람"
-                            id="logpass"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <div class="form-group mt-2">
-                          <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
-                          <input
-                            type="text"
-                            name="logpass"
-                            class="form-style"
-                            placeholder="메모"
-                            id="logpass"
-                            autocomplete="off"
-                          />
-                        </div>
-                        <button class="btn">저장하기</button>
+                        <form>
+                          <div class="form-group">
+                            <!-- <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                            <input
+                              type="text"
+                              name="logname"
+                              class="form-style"
+                              placeholder="챌린지를 입력하세요"
+                              id="logname"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="form-group mt-2">
+                            <!-- <i class="fa fa-pencil" aria-hidden="true"></i> -->
+                            <input
+                              type="number"
+                              name="logemail"
+                              class="form-style"
+                              placeholder="횟수"
+                              id="logemail"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="form-group mt-2">
+                            <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+                            <input
+                              type="time"
+                              name="logpass"
+                              class="form-style"
+                              placeholder="알람"
+                              id="logpass"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <div class="form-group mt-2">
+                            <!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+                            <input
+                              type="text"
+                              name="logpass"
+                              class="form-style"
+                              placeholder="메모"
+                              id="logpass"
+                              autocomplete="off"
+                            />
+                          </div>
+                          <button class="btn">저장하기</button>
+                        </form>
                         <!-- <a href="#" class="btn mt-4">저장하기</a> -->
                       </div>
                     </div>
@@ -191,4 +190,41 @@
       </div>
     </div>
   </body>
+
+  <!-- <form id="login_form" action="">
+    <h2>로그인</h2>
+    <input type="text" name="username" placeholder="사용자 ID" />
+    <input type="password" name="password" placeholder="비밀번호" />
+    <button type="button" id="login_button">로그인</button>
+    <button type="button" id="join_button">회원가입</button>
+  </form>
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const login = () => {
+      const login_form = document.querySelector("form#login_form");
+      // id 나 class 가 부착되지 않은 input tag 를 select 하는 방법
+      const username = login_form.querySelector("input[name='username']");
+      const password = login_form.querySelector("input[name='password']");
+      if (!username.value) {
+        alert("이름 입력해라");
+        username.focus();
+        return false;
+      }
+      if (!password.value) {
+        alert("비번 입력해라");
+        password.focus();
+        return false;
+      }
+  
+      login_form.submit();
+    }; //end login 함수
+  
+    // 함수 chainning 방식
+    document.querySelector("#login_button").addEventListener("click", login);
+  
+    document.querySelector("#join_button").addEventListener("click", () => {
+      // script 에서 a link 를 클릭한 것처럼 페이지 바꾸기
+      document.location.href = "join.html";
+    });
+  }); -->
 </html>
