@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갓생살기 - 추천하기</title>
+  <link rel="stylesheet" href="recommend.css">
+  <!-- <script src="recommend.js"></script> -->
+  <script
+  src="https://kit.fontawesome.com/3aaa5e7779.js"
+  crossorigin="anonymous"
+></script>
+</head>
+<body>
+  <nav class="side_bar">
+    <!-- 사이드바 시작 -->
+    <div class="side_top font-effect-fire">갓생살기</div>
+    <div class="side_menu">
+      <div class="inner_smenu">
+        <ul>
+          <li><a href="#">챌린지</a></li>
+          <li><a href="#">챌린지추가</a></li>
+          <li><a href="#">일정추가</a></li>
+          <li><a href="#">일정보기</a></li>
+          <li><a href="#">환경설정</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sfooter">
+      <div class="sns_wrap">
+        <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
+        <a href="#" class="sns_btn" id="insta">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="sns_btn" id="facebook">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="#" class="sns_btn" id="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="sns_btn" id="line">
+          <i class="fab fa-line"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+ 
+  <div class="phone_size">
+    <h3>챌린지에 도전하세요!</h3>
+    <div class="challenge_box" id="challenge_box">
+      <div class="challenge1" id="water" onclick="location.href ='WATER.html'">물 1L마시기</div>
+      <div class="challenge1" id="zoro" onclick="">무지출 챌린지</div>
+      <div class="challenge1" id="book" onclick="">책 한권 다 읽기</div>
+      <div class="challenge" id="dairy" onclick=""> 매일 일기쓰기</div>
+      <div class="challenge" id="bedding" onclick="">침구정리</div>
+      <div class="challenge" id="running" onclick="">런닝하기(30분)</div>
+    </div>
+    <div class="item_box">
+      <div class="item" id="box_add">
+        <div>
+          <input class="item" placeholder="  목표를 입력하세요"></input>
+        </div>
+        <button type="button" class="add" id="boxWrap">+</button>
+      </div>
+    </div>
+    </div>
+<div class="button_box">
+  <button type="button" class="btn" onclick="location.href ='main_skip.html'" id="skip">
+    <span>SKIP </span></button>
+  <button type="button" class="btn" onclick="location.href ='main_add.html'" id="save">
+    <span>저장하기</span></button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  var i = 1; // 변수설정은 함수의 바깥에 설정!
+  $("#boxWrap").click(function () {
+    $("#box_add").append("<div class=\"item\" id=\"box_add\">"+
+                        "<input class=\"item\" placeholder=\"  목표를 입력하세요\"></input>"+
+                        "</div>");
+    i++; // 함수 내 하단에 증가문 설정
+  });
+});
+</script>
+</body>
+
+</html>
