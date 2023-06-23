@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
     msg_divs[INPUT_INDEX.BIRTH].style.display = "none";
+    alert("가입을 완료하였습니다.");
+    document.location.href = "login.html";
   };
   document.querySelector("#login_btn").addEventListener("click", join);
 });

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(doc/font.ttf);
+  font-weight: bold;
+}
 .title {
   /* border: 1px solid black; */
   line-height: 250px;
@@ -8,6 +13,7 @@
   /* border: 0px solid #17b75e; */
   background-color: #f9e000;
   color: black;
+  font-family: Nanum Seongsirce;
 }
 .anchor_box {
   /* border: 1px solid orange; */
