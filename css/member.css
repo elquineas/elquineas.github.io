@@ -1,4 +1,10 @@
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(/doc/font.ttf);
+  font-weight: bold;
+}
 * {
+  font-family: Nanum Seongsirce;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
