@@ -253,8 +253,8 @@ div.item_box {
   position: relative;
   transform: translate(0, -10%);
 }
-input.item {
-  width: 300px;
+div.item {
+  width: 400px;
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -262,7 +262,9 @@ input.item {
   font-size: 30px;
   margin-bottom: 10px;
   position: relative;
+  margin: 0 auto;
   bottom: -30px;
+  background-color: white;
 }
 /*버튼*/
 /* p {

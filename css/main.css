@@ -398,6 +398,6 @@ span.icon {
   position: absolute;
   top: 35px;
   right: 200px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 /* 메인 css */
