@@ -130,9 +130,9 @@ h6 span {
   width: 1000px;
   margin: 100px auto 0; */
 }
-.full-height {
+/* .full-height {
   min-height: 100vh;
-}
+} */
 
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
