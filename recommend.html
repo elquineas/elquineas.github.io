@@ -6,72 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>갓생살기 - 추천하기</title>
   <link rel="stylesheet" href="/css/recommend.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
   <!-- <script src="recommend.js"></script> -->
   <script
   src="https://kit.fontawesome.com/3aaa5e7779.js"
   crossorigin="anonymous"
 ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+    />
 </head>
 <body>
-  <nav class="side_bar">
-    <!-- 사이드바 시작 -->
-    <div class="side_top font-effect-fire">갓생살기</div>
-    <div class="side_menu">
-      <div class="inner_smenu">
-        <ul>
-          <li><a href="#">챌린지</a></li>
-          <li><a href="#">챌린지추가</a></li>
-          <li><a href="#">일정추가</a></li>
-          <li><a href="#">일정보기</a></li>
-          <li><a href="#">환경설정</a></li>
-        </ul>
+  
+    <nav class="side_bar">
+      <!-- 사이드바 시작 -->
+      <a href="challenge_input.html" class="mainlogo">
+        <img src="./image/www2.png" width="250px" />
+        <!-- <img src="./image/ggg.png" width="50px" /> -->
+      </a>
+      <div id="godlife" class="title font-effect-fire"><a>갓생살기</a></div>
+      <div class="side_menu">
+        <div class="inner_smenu">
+          <ul>
+            <li><a class="menu" href="main_add.html">챌린지</a></li>
+            <li><a class="" href="challenge_input.html">챌린지추가</a></li>
+            <li><a href="date_input.html">일정추가</a></li>
+            <li><a href="calendar.html">일정보기</a></li>
+            <li><a href="challenge_share.html">공유</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="sfooter">
-      <div class="sns_wrap">
-        <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
-        <a href="#" class="sns_btn" id="insta">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="sns_btn" id="facebook">
-          <i class="fab fa-facebook-square"></i>
-        </a>
-        <a href="#" class="sns_btn" id="youtube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="#" class="sns_btn" id="line">
-          <i class="fab fa-line"></i>
-        </a>
+      <div class="sfooter">
+        <div class="sns_wrap">
+          <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
+          <a href="#" class="sns_btn" id="insta">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="sns_btn" id="facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#" class="sns_btn" id="youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="sns_btn" id="line">
+            <i class="fab fa-line"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
  
   <div class="phone_size">
     <h3>챌린지에 도전하세요!</h3>
     <div class="challenge_box" id="challenge_box">
       <div class="challenge1" id="water" onclick="location.href ='WATER.html'">물 1L마시기</div>
-      <div class="challenge1" id="zoro" onclick="">무지출 챌린지</div>
-      <div class="challenge1" id="book" onclick="">책 한권 다 읽기</div>
+      <div class="challenge1" id="zoro" >무지출 챌린지</div>
+      <div class="challenge1" id="book">책 한권 다 읽기</div>
       <div class="challenge" id="dairy" onclick=""> 매일 일기쓰기</div>
       <div class="challenge" id="bedding" onclick="">침구정리</div>
       <div class="challenge" id="running" onclick="">런닝하기(30분)</div>
     </div>
     <div class="item_box">
-      <div class="item" id="box_add">
-        <div>
-          <input class="item" placeholder="  목표를 입력하세요"></input>
+          <div class="item" > 목표를 눌러주세요!</div>
+          <br>
         </div>
-        <button type="button" class="add" id="boxWrap">+</button>
       </div>
-    </div>
-    </div>
-<div class="button_box">
-  <button type="button" class="btn" onclick="location.href ='main_skip.html'" id="skip">
-    <span>SKIP </span></button>
-  <button type="button" class="btn" onclick="location.href ='main_add.html'" id="save">
-    <span>저장하기</span></button>
-</div>
+      </div>
+      <div class="container">
+        <a href="main_skip.html" title="Button push blue/green" class="button btnPush btnBlueGreen">SKIP</a>
+        <a href="main_add.html" title="Button push lightblue" class="button btnPush btnLightBlue">저장하기</a>
+        <div class="clear"></div>
+      </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">

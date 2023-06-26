@@ -19,6 +19,10 @@ body {
   text-align: center;
   background-color: #fff7ee;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .side_bar {
   position: fixed;
@@ -32,12 +36,23 @@ body {
   flex-direction: column;
   z-index: 1;
 }
+.side_bar a {
+  line-height: normal;
+}
 .side_top {
   /* border: 1px solid blue; */
   height: 200px;
   font-size: 45px;
   line-height: 200px;
   text-align: center;
+}
+#godlife {
+  /* position: absolute; */
+  /* top: 5%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 0%); */
+  font-size: 40px;
+  cursor: pointer;
 }
 /*사이드 메뉴*/
 .side_menu {
@@ -204,4 +219,9 @@ body {
   animation: sns_hover 0.7s 1;
   top: -10%;
   left: -10%;
+}
+
+.test {
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }
