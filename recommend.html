@@ -20,43 +20,102 @@
 </head>
 <body>
   
-    <nav class="side_bar">
-      <!-- 사이드바 시작 -->
-      <a href="challenge_input.html" class="mainlogo">
-        <img src="./image/www2.png" width="250px" />
-        <!-- <img src="./image/ggg.png" width="50px" /> -->
-      </a>
-      <div id="godlife" class="title font-effect-fire"><a>갓생살기</a></div>
-      <div class="side_menu">
-        <div class="inner_smenu">
-          <ul>
-            <li><a class="menu" href="main_add.html">챌린지</a></li>
-            <li><a class="" href="challenge_input.html">챌린지추가</a></li>
-            <li><a href="date_input.html">일정추가</a></li>
-            <li><a href="calendar.html">일정보기</a></li>
-            <li><a href="challenge_share.html">공유</a></li>
-          </ul>
-        </div>
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무지출</title>
+  <link rel="stylesheet" href="/css/recommend.css">
+  <link rel="stylesheet" href="css/share.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <script src="recommend.js"></script>
+  <script
+  src="https://kit.fontawesome.com/3aaa5e7779.js"
+  crossorigin="anonymous"
+></script>
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Sofia&effect=fire"
+/>
+</head>
+<body>
+  <nav class="side_bar">
+    <!-- 사이드바 시작 -->
+    <a href="" class="mainlogo">
+      <img src="./image/www2.png" width="250px" />
+      <!-- <img src="./image/ggg.png" width="50px" /> -->
+    </a>
+    <div id="godlife" class="title font-effect-fire"><a>갓생살기</a></div>
+    <div class="side_menu">
+      <div class="inner_smenu">
+        <ul>
+          <li><a class="" class="=menu" href="main_add.html">챌린지</a></li>
+          <li><a href="challenge_input.html">챌린지추가</a></li>
+          <li><a href="date_input.html">일정추가</a></li>
+          <li><a href="calendar.html">일정보기</a></li>
+          <li><a href="challenge_share.html">공유</a></li>
+        </ul>
       </div>
+    </div>
 
-      <div class="sfooter">
-        <div class="sns_wrap">
-          <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
-          <a href="#" class="sns_btn" id="insta">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="sns_btn" id="facebook">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a href="#" class="sns_btn" id="youtube">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="#" class="sns_btn" id="line">
-            <i class="fab fa-line"></i>
-          </a>
+    <div class="sfooter">
+      <div class="sns_wrap">
+        <!-- <a href="" class="icon-twitter icon-blue icon-btn"></a> -->
+        <a href="https://www.instagram.com/" target="_blank" class="sns_btn" id="insta">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://ko-kr.facebook.com/" target="_blank" class="sns_btn" id="facebook">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="sns_btn" id="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://line.me/ko/" target="_blank" class="sns_btn" id="line">
+          <i class="fab fa-line"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+ 
+  <div class="phone_size">
+    <h3>챌린지에 도전하세요!</h3>
+    <div class="challenge_box" id="challenge_box">
+      <div class="challenge1" id="water" > 물 1L마시기</div>
+      <div class="challenge1" id="zoro" onclick="location.href ='ZERO.html'">무지출 챌린지</div>
+      <div class="challenge1" id="book">책 한권 다 읽기</div>
+      <div class="challenge" id="dairy" onclick=""> 매일 일기쓰기</div>
+      <div class="challenge" id="bedding" onclick="">침구정리</div>
+      <div class="challenge" id="running" onclick="">런닝하기(30분)</div>
+    </div>
+    <div class="item_box">
+          <div class="item">목표를 눌러주세요! </div>
+          <br>
         </div>
       </div>
-    </nav>
+      </div>
+      <div class="container">
+        <a href="" title="Button push blue/green" class="button btnPush btnBlueGreen"onclick="location.href ='main_sikp.html'">SKIP</a>
+        <a href="" title="Button push lightblue" class="button btnPush btnLightBlue"onclick="location.href ='main.html'">저장하기</a>
+        <div class="clear"></div>
+      </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  var i = 1; // 변수설정은 함수의 바깥에 설정!
+  $("#boxWrap").click(function () {
+    $("#box_add").append("<div class=\"item\" id=\"box_add\">"+
+                        "<input class=\"item\" placeholder=\"  목표를 입력하세요\"></input>"+
+                        "</div>");
+    i++; // 함수 내 하단에 증가문 설정
+  });
+});
+</script>
+</body>
+
+</html>
+<!— 물 —>
  
   <div class="phone_size">
     <h3>챌린지에 도전하세요!</h3>
