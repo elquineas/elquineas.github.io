@@ -288,12 +288,15 @@ a:visited {
 }
 
 .container {
-  padding-top: 1em;
-  margin-top: 1em;
-  /* margin: 0 auto;
-  text-align: center; */
+  /* padding-top: 1em;
+  margin-top: 1em; */
+  margin: 9em auto 0;
+  text-align: center;
   position: relative;
-  transform: translate(168%, 130%);
+  display: flex;
+  padding: 1em 123px 0;
+
+  /* transform: translate(168%, 130%); */
   /* border: 1px solid black; */
   width: 500px;
 }
