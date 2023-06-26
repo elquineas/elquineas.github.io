@@ -47,10 +47,10 @@ a {
   text-align: center;
 }
 #godlife {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  /* position: absolute; */
+  /* top: 5%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 0%); */
   font-size: 40px;
   cursor: pointer;
 }
