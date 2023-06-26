@@ -47,6 +47,7 @@ body {
   align-items: center;
   transition: 0.4s;
   text-decoration: none;
+  cursor: pointer;
 }
 .search_txt {
   border: none;
