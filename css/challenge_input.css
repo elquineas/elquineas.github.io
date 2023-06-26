@@ -149,8 +149,8 @@ h6 span {
   height: 400px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  /* perspective: 800px; */
-  /* margin-top: 60px; */
+  /* perspective: 800px; 
+   margin-top: 60px; */
   margin: 0 auto;
 }
 

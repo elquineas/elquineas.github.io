@@ -174,22 +174,24 @@ h6 span {
 
 /* 기간 횟수 입력칸 중앙 이동 */
 .card-3d-wrap {
-  position: relative;
-  left: 41%;
+  /* position: relative;
+  left: 41%; */
   width: 440px;
   max-width: 100%;
   height: 400px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   perspective: 800px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  margin: 0 auto;
 }
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -40px;
-  left: -55px;
+  top: 50px;
+  /* top: -40px; */
+  /* left: -55px; */
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: all 600ms ease-out;
@@ -286,8 +288,8 @@ h6 span {
   /* width: 100%; */
   width: 77%;
   padding: 0 35px;
-  top: 50%;
-  left: -300px;
+  top: 53%;
+  left: -311px;
   transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
   display: block;
