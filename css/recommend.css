@@ -287,8 +287,10 @@ a:visited {
 .container {
   padding-top: 1em;
   margin-top: 1em;
+  /* margin: 0 auto;
+  text-align: center; */
   position: relative;
-  transform: translate(110%, -20%);
+  transform: translate(168%, -20%);
   /* border: 1px solid black; */
   width: 500px;
 }
