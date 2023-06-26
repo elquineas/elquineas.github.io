@@ -6,6 +6,7 @@
     <title>main</title>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/sidebar.css">
+  <script src="js/main.js"></script>
   <script
   src="https://kit.fontawesome.com/3aaa5e7779.js"
   crossorigin="anonymous"
@@ -81,9 +82,10 @@
           <span class="water">물 1L 마시기</span>
           <span class="count"><span id="water_count" onclick="waterFunc()">7</span>/30</span>
           <button class="add" onclick="waterFunc()">+</button>
-          <span class="icon" onclick="location.href='challenge_share.html'">
+          <span class="icon">
             <i class="fa fa-share-alt" aria-hidden="true"></i>
           </span>
+          <!--  onclick="location.href='challenge_share.html'" -->
         </div>
   
         <div class="challenge">
@@ -91,7 +93,7 @@
           <span class="zero">무지출 챌린지</span>
           <span class="count"><span id="zero_count" onclick="zeroFunc()">0</span>/30</span>
           <button class="add" onclick="zeroFunc()">+</button>
-          <span class="icon" onclick="location.href='challenge_share.html'">
+          <span class="icon">
             <i class="fa fa-share-alt" aria-hidden="true"></i>
           </span>
           
@@ -101,13 +103,47 @@
           <span class="book">책 한권 다읽기</span>
           <span class="count"><span id="book_count" onclick="bookFunc()">27</span>/30</span>
           <button class="add" onclick="bookFunc()">+</button>
-          <span class="icon" onclick="location.href='challenge_share.html'">
+          <span class="icon">
             <i class="fa fa-share-alt" aria-hidden="true"></i>
           </span>
          
-
-          
-         
+    </div>
+    <div class="backgound_shadow">
+      <div class="share_box1">
+        <span class="profile_lv">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </span>
+        <div class="profile">
+          <div class="profile_img img1"></div>
+          <div class="profile_text">
+            <div>닉네임</div>
+            <div>작은거라도 꾸준히 습관을 만들자</div>
+          </div>
+        </div>
+        <div class="mession">
+          <span>물 1L 마시기</span>
+        </div>
+        <div class="Attainment">
+          <div>
+            도전일자<br />
+            30일
+          </div>
+          <div>
+            성공일자<br />
+            7일
+          </div>
+          <div class="Attainment_star">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="good_btn">
+          <span id="share1">공유하기</span><span id="cancle1">취소하기</span>
+        </div>
+      </div>
     </div>
   </body>
  <script>
