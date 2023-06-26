@@ -239,12 +239,12 @@ div.challenge1 {
 div.challenge:hover {
   background-color: #fdefc2;
   border-radius: 10px;
-  padding: 1px 1px;
+  /* padding: 1px 1px; */
 }
 div.challenge1:hover {
   background-color: #fdefc2;
   border-radius: 10px;
-  padding: 1px 1px;
+  /* padding: 1px 1px; */
 }
 div.item_box {
   /* border:  1px solid black; */
