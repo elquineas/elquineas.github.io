@@ -206,6 +206,11 @@ body {
   left: -10%;
 }
 
+.challenge1,
+.challenge {
+  cursor: pointer;
+}
+
 /* div.phone_size{
    border:  1px solid black;
 } */
